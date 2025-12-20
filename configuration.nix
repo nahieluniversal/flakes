@@ -145,6 +145,11 @@ olivernix = {
     pkgs.protontricks
     pkgs.vscode
     pkgs.git
+    pkgs.discord
+    pkgs.vencord
+    pkgs.kdePackages.kservice
+    pkgs.ayugram-desktop
+    pkgs.patchelf
   ];
   programs.steam = {
   enable = true;
