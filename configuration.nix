@@ -150,12 +150,16 @@ olivernix = {
     pkgs.kdePackages.kservice
     pkgs.ayugram-desktop
     pkgs.patchelf
+    pkgs.jdk25_headless
   ];
   programs.steam = {
   enable = true;
   remotePlay.openFirewall = true; #pkgs.flatpak Open ports in the firewall for Steam Remote Play
   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+};
+virtualisation.docker = {
+  enable = true;
 };
     # rtkit (optional, recommended) allows Pipewire to use the realtime scheduler for increased performance.
   hardware.graphics.enable32Bit = true;
