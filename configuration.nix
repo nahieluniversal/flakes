@@ -72,7 +72,10 @@ olivernix = {
   nixpkgs.config.allowUnfree = true;
   #Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes"];
-  services.mullvad-vpn.package = pkgs.mullvad-vpn;
+  services.mullvad-vpn = {
+  enable = true;
+  package = pkgs.mullvad-vpn;
+  };
   hardware.openrazer.enable = true;
   #VirtualBox
   virtualisation.virtualbox.host.enable = true;
