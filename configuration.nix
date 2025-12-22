@@ -84,6 +84,7 @@ olivernix = {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    (callPackage /home/olivernix/flakes/sddm-themes.nix {}).where_is_my_sddm_qt5
     vim
     wget
     kdePackages.dolphin
@@ -154,6 +155,7 @@ olivernix = {
     pkgs.ayugram-desktop
     pkgs.patchelf
     pkgs.jdk25_headless
+    pkgs.android-tools
   ];
   programs.steam = {
   enable = true;
@@ -164,6 +166,8 @@ olivernix = {
 virtualisation.docker = {
   enable = true;
 };
+hardware.bluetooth.enable = true;
+services.blueman.enable = true;
     # rtkit (optional, recommended) allows Pipewire to use the realtime scheduler for increased performance.
   hardware.graphics.enable32Bit = true;
   security.rtkit.enable = true;
