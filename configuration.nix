@@ -84,7 +84,7 @@ olivernix = {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    (callPackage /home/olivernix/flakes/sddm-themes.nix {}).where_is_my_sddm_qt5
+    (callPackage /home/olivernix/flakes/sddm-themes.nix {})
     vim
     wget
     kdePackages.dolphin
