@@ -84,7 +84,7 @@ olivernix = {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    (callPackage /home/olivernix/flakes/sddm-themes.nix {})
+    #(callPackage /home/olivernix/flakes/sddm-themes.nix {})
     vim
     wget
     kdePackages.dolphin
@@ -156,6 +156,8 @@ olivernix = {
     pkgs.patchelf
     pkgs.jdk25_headless
     pkgs.android-tools
+    pkgs.gamescope
+    pkgs.mangohud
   ];
   programs.steam = {
   enable = true;
