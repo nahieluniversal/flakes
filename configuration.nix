@@ -149,8 +149,7 @@ olivernix = {
     pkgs.protontricks
     pkgs.vscode
     pkgs.git
-    pkgs.discord
-    pkgs.vencord
+    pkgs.vesktop
     pkgs.kdePackages.kservice
     pkgs.ayugram-desktop
     pkgs.patchelf
