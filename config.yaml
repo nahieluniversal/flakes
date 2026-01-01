@@ -1,0 +1,96 @@
+#Example AppIds Config for those not familiar with YAML:
+#AppIds:
+#  - 440
+#  - 730
+#Take care of not messing up your spaces! Otherwise it won't work
+
+#Example of DlcData:
+#DlcData:
+#  AppId:
+#    FirstDlcAppId: "Dlc Name"
+#    SecondDlcAppId: "Dlc Name"
+
+#Disables Family Share license locking for self and others
+DisableFamilyShareLock: yes
+#Switches to whitelist instead of the default blacklist
+UseWhitelist: no
+#Automatically filter Apps in CheckAppOwnership. Filters everything but Games and Applications. Should not affect DLC checks
+#Overrides black-/whitelist. Gets overriden by AdditionalApps
+AutoFilterList: yes
+#List of AppIds to ex-/include
+AppIds:
+#PVZ GOTY
+  - 3590
+#YIIK
+  - 459080
+#Angels of death
+  - 537110
+#PVZ Replanted
+  - 3654560
+#Mini Metro
+  - 287980
+#Mini Motorways
+  - 1127500
+#Hades
+  - 1145360
+#FNAF 2
+  - 332800
+#Is this seat taken
+  - 3035120
+#The noexistent of you and me
+  - 2873080
+  - 3639130
+#P3R DLC
+  - 2517310
+  - 2517300
+#FFVIIRemake
+  - 1462040
+#Needy Girl Overdose
+  - 1451940
+  - 1645220
+#Persona 5 Royal
+  - 1687950
+#SMT III Remaster
+  - 1413480
+#FNAF 3
+  - 354140
+#FNAF 4
+  - 388090
+#It takes two
+  - 1426210
+#Enables playing of not owned games. Respects black-/whitelist AppIds
+PlayNotOwnedGames: no
+#Additional AppIds to inject (Overrides your black-/whitelist & also overrides OwnerIds for apps you got shared!) Best to use this only on games NOT in your library.
+AdditionalApps:
+  - 3590
+  - 459080
+  - 537110
+  - 3654560
+  - 287980
+  - 1127500
+  - 1145360
+  - 332800
+  - 3035120
+  - 2873080
+  - 3639130
+  - 2517310
+  - 2517300
+  - 1462040
+  - 1451940
+  - 1645220
+  - 1687950
+  - 1413480
+  - 354140
+  - 1426210
+  - 388090
+#Extra Data for Dlcs belonging to a specific AppId. Only needed
+#when the App you're playing is hit by Steams 64 DLC limit
+DlcData:
+#Automatically disable SLSsteam when steamclient.so does not match a predefined file hash that is known to work
+#You should enable this if you're planing to use SLSsteam with Steam Deck's gamemode
+SafeMode: no
+#Warn user via notification when steamclient.so hash differs from known safe hash
+#Mostly useful for development so I don't accidentally miss an update
+WarnHashMissmatch: no
+#Logs all calls to Steamworks (this makes the logfile huge! Only useful for debugging/analyzing
+ExtendedLogging: no

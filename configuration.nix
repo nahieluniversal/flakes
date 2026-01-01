@@ -160,6 +160,8 @@ olivernix = {
     pkgs.go
     pkgs.zoxide
     pkgs.fzf
+    pkgs.prismlauncher
+    pkgs.curl
   ];
   programs.steam = {
   enable = true;
@@ -170,6 +172,10 @@ olivernix = {
 virtualisation.docker = {
   enable = true;
 };
+virtualisation.waydroid = {
+    enable = true;
+    package = pkgs.waydroid-nftables;
+  };
 hardware.bluetooth.enable = true;
 services.blueman.enable = true;
     # rtkit (optional, recommended) allows Pipewire to use the realtime scheduler for increased performance.
