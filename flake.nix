@@ -8,14 +8,9 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    sls-steam = {
-      url = "github:AceSLS/SLSsteam";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { self, nixpkgs, zen-browser, sls-steam }:
+  outputs = { self, nixpkgs, zen-browser }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -35,7 +30,7 @@
         inherit system;
 
         specialArgs = {
-          inherit pkgs system zen-browser sls-steam;
+          inherit pkgs system zen-browser ;
         };
 
         modules = [
@@ -47,18 +42,6 @@
               (zen-browser.packages.${system}.default)
               opforjellyfin
             ];
-          })
-
-          # steam + SLS
-          ({ pkgs, system, sls-steam, ... }: {
-            programs.steam = {
-              enable = true;
-              package = pkgs.steam.override {
-                extraEnv = {
-                  LD_AUDIT = "${sls-steam.packages.${system}.sls-steam}/SLSsteam.so";
-                };
-              };
-            };
           })
         ];
       };
