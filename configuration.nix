@@ -144,7 +144,6 @@ olivernix = {
     pkgs.kdePackages.okular
     pkgs.p7zip
     pkgs.cabextract
-    pkgs.flatpak
     pkgs.winetricks
     pkgs.protontricks
     pkgs.vscode
@@ -162,7 +161,11 @@ olivernix = {
     pkgs.fzf
     pkgs.prismlauncher
     pkgs.curl
+    pkgs.baobab
+    pkgs.python312
+    pkgs.scarab
   ];
+  services.flatpak.enable = true;
   programs.steam = {
   enable = true;
   remotePlay.openFirewall = true; #pkgs.flatpak Open ports in the firewall for Steam Remote Play
