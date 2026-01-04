@@ -164,6 +164,7 @@ olivernix = {
     pkgs.baobab
     pkgs.python312
     pkgs.scarab
+    pkgs.samrewritten
   ];
   services.flatpak.enable = true;
   programs.steam = {
