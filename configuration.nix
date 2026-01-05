@@ -177,6 +177,7 @@ olivernix = {
     pkgs.python312
     pkgs.scarab
     pkgs.samrewritten
+    pkgs.usbutils
   ];
   services.flatpak.enable = true;
   programs.steam = {
