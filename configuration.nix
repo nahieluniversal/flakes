@@ -71,10 +71,23 @@ olivernix = {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   #Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
+  nix.settings = {
+  experimental-features = [ "nix-command" "flakes"];
+  auto-optimise-store = true;
+  };
+  nix.gc = {
+  automatic = true;
+  dates = "weekly";
+  options = "--delete-older-than 7d";
+  };
   services.mullvad-vpn = {
   enable = true;
   package = pkgs.mullvad-vpn;
+  };
+  services.btrfs.autoScrub = {
+  enable = true;
+  fileSystems = [ "/home" ];
+  interval = "weekly";
   };
   hardware.openrazer.enable = true;
   #VirtualBox
@@ -170,8 +183,11 @@ olivernix = {
   enable = true;
   remotePlay.openFirewall = true; #pkgs.flatpak Open ports in the firewall for Steam Remote Play
   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-};
+  localNetworkGameTransfers.openFirewall = true;
+  extraCompatPackages = with pkgs; [
+  proton-ge-bin
+    ];
+  };
 virtualisation.docker = {
   enable = true;
 };
