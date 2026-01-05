@@ -187,6 +187,11 @@ olivernix = {
   extraCompatPackages = with pkgs; [
   proton-ge-bin
     ];
+  package = pkgs.steam.override {
+    extraEnv = {
+      LD_AUDIT = "/home/olivernix/.local/share/SLSsteam/library-inject.so:/home/olivernix/.local/share/SLSsteam/SLSsteam.so";
+    };
+  };
   };
 virtualisation.docker = {
   enable = true;
