@@ -121,7 +121,6 @@ olivernix = {
     pkgs.mullvad-vpn
     pkgs.qbittorrent
     keepassxc
-    pkgs.hyprnotify
     pkgs.fastfetch
     pkgs.kdePackages.ark
     pkgs.libnotify
