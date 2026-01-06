@@ -180,6 +180,7 @@ olivernix = {
     pkgs.samrewritten
     pkgs.usbutils
     pkgs.tldr
+    pkgs.home-manager
   ];
   services.flatpak.enable = true;
   programs.steam = {
