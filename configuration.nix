@@ -74,6 +74,7 @@ olivernix = {
   nix.settings = {
   experimental-features = [ "nix-command" "flakes"];
   auto-optimise-store = true;
+  allowed-users = [ "olivernix" "root" ];
   };
   nix.gc = {
   automatic = true;
@@ -178,6 +179,7 @@ olivernix = {
     pkgs.scarab
     pkgs.samrewritten
     pkgs.usbutils
+    pkgs.tldr
   ];
   services.flatpak.enable = true;
   programs.steam = {
