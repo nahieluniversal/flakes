@@ -99,6 +99,11 @@ olivernix = {
   fileSystems = [ "/home" ];
   interval = "weekly";
   };
+  services.syncthing = { 
+    enable = true;
+    openDefaultPorts = true;
+  };
+  # OpenRazer
   hardware.openrazer.enable = true;
   #VirtualBox
   virtualisation.virtualbox.host.enable = true;
