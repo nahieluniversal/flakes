@@ -133,7 +133,6 @@ olivernix = {
     pkgs.cliphist
     pkgs.pavucontrol
     pkgs.wl-clipboard
-    font-awesome
     material-icons
     adwaita-icon-theme
     pkgs.lutris
