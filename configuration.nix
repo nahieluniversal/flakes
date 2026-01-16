@@ -58,7 +58,15 @@ services.resolved = {
   };
   # Configure console keymap
   console.keyMap = "es";
-
+  #Zsh configuration`
+  programs.zsh = {
+    enable = true;
+    ohMyZsh = {
+      enable = true;
+      theme = "agnoster";
+      plugins = [ "git" "docker" "docker-compose" "kubectl" "kubectx" "z" "zoxide" ];
+    };
+  };
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.
 olivernix = {
@@ -66,6 +74,7 @@ olivernix = {
     description = "olivernix";
     extraGroups = [ "networkmanager" "wheel" "video" "docker" "plugdev" "audio" "openrazer" ];
     packages = with pkgs; [];
+    shell = pkgs.zsh;
   };
 
   # Allow unfree packages
