@@ -191,6 +191,9 @@ olivernix = {
     pkgs.tldr
     pkgs.home-manager
   ];
+  fonts.packages = with pkgs; [
+  font-awesome
+  ];
   services.flatpak.enable = true;
   programs.steam = {
   enable = true;
