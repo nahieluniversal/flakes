@@ -102,6 +102,8 @@ olivernix = {
   services.syncthing = { 
     enable = true;
     openDefaultPorts = true;
+    overrideDevices = false;
+    overrideFolders = false;
   };
   # OpenRazer
   hardware.openrazer.enable = true;
