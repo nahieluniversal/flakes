@@ -66,6 +66,16 @@ services.resolved = {
       theme = "agnoster";
       plugins = [ "git" "docker" "docker-compose" "kubectl" "kubectx" "z" "zoxide" ];
     };
+    shellAliases = {
+      futaba = "sudo nixos-rebuild switch --flake /home/olivernix/flakes/#nixos";
+      cd = "z";
+      ncg ="sudo nix-collect-garbage -d";
+      jds = "docker start jdownloader-2";
+      upd = "cd /home/olivernix/flakes && nix flake update && futaba";
+    };
+    shellInit = ''
+    fastfetch
+    '';
   };
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.
@@ -196,6 +206,7 @@ olivernix = {
     pkgs.usbutils
     pkgs.tldr
     pkgs.home-manager
+    pkgs.edl
   ];
   fonts.packages = with pkgs; [
   font-awesome
