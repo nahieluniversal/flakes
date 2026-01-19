@@ -7,8 +7,10 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+      ./hardware-configuration.nix      
+      ../../common/programs/zen.nix
+      ../../common/programs/opforjellyfin.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
