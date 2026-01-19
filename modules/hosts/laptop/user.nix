@@ -10,7 +10,7 @@
       plugins = [ "git" "docker" "docker-compose" "kubectl" "kubectx" "z" "zoxide" ];
     };
     shellAliases = {
-      futaba = "sudo nixos-rebuild switch --flake /home/olivernix/flakes/#laptopolivernix@laptop";
+      futaba = "sudo nixos-rebuild switch --flake /home/olivernix/flakes/#laptop";
       cd = "z";
       ncg = "sudo nix-collect-garbage -d";
       jds = "docker start jdownloader-2";
