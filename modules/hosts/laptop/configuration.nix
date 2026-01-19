@@ -13,13 +13,13 @@
   ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = true;ixos
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "laptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -71,7 +71,7 @@ services.resolved = {
       plugins = [ "git" "docker" "docker-compose" "kubectl" "kubectx" "z" "zoxide" ];
     };
     shellAliases = {
-      futaba = "sudo nixos-rebuild switch --flake /home/olivernix/flakes/#nixos";
+      futaba = "sudo nixos-rebuild switch --flake /home/olivernix/flakes/#laptopolivernix@laptop";
       cd = "z";
       ncg ="sudo nix-collect-garbage -d";
       jds = "docker start jdownloader-2";
@@ -129,88 +129,87 @@ olivernix = {
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     #(callPackage /home/olivernix/flakes/sddm-themes.nix {})
-    vim
-    wget
-    kdePackages.dolphin
-    kdePackages.kate
-    waybar
+    adwaita-icon-theme
+    pkgs.android-tools
     pkgs.alacritty
-    pkgs.localsend
-    pkgs.rofi
-    pkgs.hyprshot
-    pkgs.hyprpaper
-    pkgs.hyprnotify
-    pkgs.hyprpolkitagent
-    pkgs.ppsspp
-    pkgs.vlc
-    pkgs.lshw-gui
-    pkgs.lshw
+    pkgs.ayugram-desktop
+    pkgs.baobab
+    pkgs.cabextract
+    pkgs.cliphist
+    pkgs.curl
+    pkgs.davinci-resolve-studio
+    pkgs.ddrescue
+    pkgs.edl
+    pkgs.exfatprogs
+    pkgs.fastfetch
+    pkgs.feh
     ffmpeg
+    pkgs.filezilla
+    pkgs.fzf
+    pkgs.gamescope
+    pkgs.gimp
+    pkgs.git
+    pkgs.go
+    gst_all_1.gst-libav
+    gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-good
-    gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-ugly
-    gst_all_1.gst-libav
-    pkgs.cliphist
-    pkgs.pavucontrol
-    pkgs.wl-clipboard
-    material-icons
-    adwaita-icon-theme
-    pkgs.lutris
-    pkgs.heroic
-    pkgs.ryubing
-    pkgs.swww
-    pkgs.vencord
-    pkgs.mullvad-vpn
-    pkgs.qbittorrent
-    keepassxc
-    pkgs.fastfetch
-    pkgs.kdePackages.ark
-    pkgs.libnotify
-    pkgs.zenity
-    pkgs.davinci-resolve-studio
-    wineWowPackages.staging
     pkgs.gtk3
-    pkgs.kdePackages.partitionmanager
-    pkgs.exfatprogs
-    pkgs.filezilla
-    pkgs.ddrescue
-    pkgs.testdisk
-    pkgs.zip
-    pkgs.unzip
-    pkgs.libreoffice-qt-fresh
-    pkgs.rar
-    pkgs.unrar
-    pkgs.gimp
-    pkgs.feh
-    pkgs.kdePackages.okular
-    pkgs.p7zip
-    pkgs.cabextract
-    pkgs.winetricks
-    pkgs.protontricks
-    pkgs.vscode
-    pkgs.git
-    pkgs.vesktop
-    pkgs.kdePackages.kservice
-    pkgs.ayugram-desktop
-    pkgs.patchelf
-    pkgs.jdk25_headless
-    pkgs.android-tools
-    pkgs.gamescope
-    pkgs.mangohud
-    pkgs.go
-    pkgs.zoxide
-    pkgs.fzf
-    pkgs.prismlauncher
-    pkgs.curl
-    pkgs.baobab
-    pkgs.python312
-    pkgs.scarab
-    pkgs.samrewritten
-    pkgs.usbutils
-    pkgs.tldr
+    pkgs.heroic
     pkgs.home-manager
-    pkgs.edl
+    pkgs.hyprnotify
+    pkgs.hyprpaper
+    pkgs.hyprpolkitagent
+    pkgs.hyprshot
+    kdePackages.kate
+    kdePackages.dolphin
+    kdePackages.kservice
+    pkgs.kdePackages.ark
+    pkgs.kdePackages.okular
+    pkgs.kdePackages.partitionmanager
+    keepassxc
+    pkgs.libnotify
+    pkgs.libreoffice-qt-fresh
+    pkgs.localsend
+    pkgs.lshw
+    pkgs.lshw-gui
+    pkgs.lutris
+    material-icons
+    pkgs.mangohud
+    pkgs.mullvad-vpn
+    pkgs.p7zip
+    pkgs.patchelf
+    pkgs.pavucontrol
+    pkgs.ppsspp
+    pkgs.prismlauncher
+    pkgs.protontricks
+    pkgs.python312
+    pkgs.qbittorrent
+    pkgs.rar
+    pkgs.rofi
+    pkgs.ryubing
+    pkgs.samrewritten
+    pkgs.scarab
+    pkgs.swww
+    pkgs.testdisk
+    pkgs.tldr
+    pkgs.unrar
+    pkgs.unzip
+    pkgs.usbutils
+    pkgs.vencord
+    pkgs.vesktop
+    vim
+    pkgs.vlc
+    pkgs.vscode
+    waybar
+    wget
+    wineWowPackages.staging
+    pkgs.winetricks
+    pkgs.wl-clipboard
+    pkgs.zenity
+    pkgs.zip
+    pkgs.zoxide
   ];
   fonts.packages = with pkgs; [
   font-awesome
