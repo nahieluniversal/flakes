@@ -8,7 +8,7 @@
   imports = [
     # Hardware
     ./hardware-configuration.nix
-    ./hardware.nix
+    ./hardware-extra.nix
     
     # Display & Environment
     ./hyprland.nix
