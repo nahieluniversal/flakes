@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     cabextract
-    compose2nix.packages.${pkgs.system}.compose2nix
+    inputs.compose2nix.packages.${pkgs.system}.compose2nix
     curl
     ddrescue
     exfatprogs
