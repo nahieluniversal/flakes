@@ -28,5 +28,6 @@
     # Common programs from flakes
     #../../programs/zen.nix
     ../../programs/opforjellyfin.nix
+    ../../programs/compose2nix.nix
   ];
 }

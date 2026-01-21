@@ -12,7 +12,7 @@
     inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, zen-browser, compose2nix }:
+  outputs = { self, nixpkgs, zen-browser }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -23,7 +23,7 @@
       mkHost = hostName: nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
-          inherit pkgs system zen-browser compose2nix;
+          inherit pkgs system zen-browser;
         };
         modules = [
           ./modules/hosts/${hostName}/configuration.nix
