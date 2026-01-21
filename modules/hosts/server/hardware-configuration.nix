@@ -28,7 +28,10 @@
     { device = "/dev/disk/by-uuid/9e12668a-9911-4f7a-9e13-29c517bc0ae8";
       fsType = "btrfs";
     };
-
+  fileSystems."/media" =
+    { device = "/dev/sda1";
+      fsType = "ext4";
+    };
   swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
