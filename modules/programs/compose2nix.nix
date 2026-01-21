@@ -2,6 +2,6 @@
 
 {
   environment.systemPackages = [
-    compose2nix.packages.${system}.compose2nix
+    compose2nix.packages.${system}.default
   ];
 }
