@@ -9,9 +9,9 @@
   boot.kernelPackages = pkgs.linuxPackages;
 
   # Networking
-  networking.hostName = "laptop";
+  networking.hostName = "server";
   networking.networkmanager.enable = true;
-  networking.firewall.allowedTCPPorts = [ 80 443 1401 2200 47984 47989 47990 48010 53317 53318 ];
+  networking.firewall.allowedTCPPorts = [ 22 80 443 1401 2200 47984 47989 47990 48010 53317 53318 ];
   networking.firewall.allowedUDPPorts = [ 53 1194 1195 1196 1197 1300 1301 1302 1303 1400 47984 47989 47990 48010 53317 53318 ];
   networking.nameservers = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
 
@@ -50,7 +50,9 @@
     auto-optimise-store = true;
     allowed-users = [ "olivernix" "root" ];
   };
-
+  services.openssh = {
+	enable = true;
+  };
   nix.gc = {
     automatic = true;
     dates = "weekly";

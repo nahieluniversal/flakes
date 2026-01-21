@@ -11,7 +11,7 @@
     #./hardware-extra.nix
     
     # Display & Environment
-    ./hyprland.nix
+    #./hyprland.nix
     
     # User & Shell
     ./user.nix
