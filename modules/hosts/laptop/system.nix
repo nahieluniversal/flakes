@@ -67,7 +67,7 @@
     fileSystems = [ "/home" ];
     interval = "weekly";
   };
-
+  services.tailscale.enable = true;
   # State version
   system.stateVersion = "25.11";
 }
