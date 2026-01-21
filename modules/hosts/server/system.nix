@@ -24,6 +24,11 @@
       dnsovertls = "true";
     };
   };
+  fileSystems."/media" = {
+    device = "/dev/disk/by-uuid/16e95dc7-12da-47bc-90dd-4ec419d895e4";
+    fsType = "ext4";
+    options = [ "defaults" ];
+  };
 
   # Timezone and locale
   time.timeZone = "Europe/Madrid";
