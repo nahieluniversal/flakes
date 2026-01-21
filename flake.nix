@@ -12,7 +12,7 @@
     inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, zen-browser }:
+  outputs = { self, nixpkgs, zen-browser, compose2nix, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
