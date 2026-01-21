@@ -29,7 +29,9 @@
     fsType = "ext4";
     options = [ "defaults" ];
   };
-
+  systemd.tmpfiles.rules = [
+    "d /media 0755 root root -"
+  ];
   # Timezone and locale
   time.timeZone = "Europe/Madrid";
   i18n.defaultLocale = "es_ES.UTF-8";
