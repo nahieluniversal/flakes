@@ -23,7 +23,7 @@
       mkHost = hostName: nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
-          inherit pkgs system zen-browser;
+          inherit pkgs system zen-browser compose2nix;
         };
         modules = [
           ./modules/hosts/${hostName}/configuration.nix
