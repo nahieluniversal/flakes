@@ -78,6 +78,10 @@
   };
   #Tailscale
   services.tailscale.enable = true;
+  services.jellyfin = {
+    enable = true;
+    openFirewall = true;
+  };
   # State version
   system.stateVersion = "26.05";
 }
