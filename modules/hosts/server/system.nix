@@ -32,6 +32,10 @@
   systemd.tmpfiles.rules = [
     "d /media 0755 root root -"
   ];
+  # Logind configuration
+  services.logind.lidSwitch = "ignore";
+  services.logind.lidSwitchDocked = "ignore";
+
   # Timezone and locale
   time.timeZone = "Europe/Madrid";
   i18n.defaultLocale = "es_ES.UTF-8";
