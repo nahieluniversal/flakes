@@ -18,6 +18,7 @@
     gst_all_1.gst-plugins-good
     gst_all_1.gst-plugins-ugly
     home-manager
+    pkgs.jocalsend
     lshw
     mullvad-vpn
     p7zip
