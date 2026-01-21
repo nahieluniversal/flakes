@@ -82,6 +82,9 @@
     enable = true;
     openFirewall = true;
   };
+  virtualisation.docker = {
+  enable = true;
+  };
   # State version
   system.stateVersion = "26.05";
 }

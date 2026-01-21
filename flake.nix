@@ -7,8 +7,12 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    compose2nix = {
+    url = "github:aksiksi/compose2nix";
+    inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs, zen-browser }:
+  outputs = { self, nixpkgs, zen-browser, compose2nix }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -19,7 +23,7 @@
       mkHost = hostName: nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
-          inherit pkgs system zen-browser;
+          inherit pkgs system zen-browser compose2nix;
         };
         modules = [
           ./modules/hosts/${hostName}/configuration.nix

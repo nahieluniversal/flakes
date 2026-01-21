@@ -1,8 +1,9 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, compose2nix, ... }:
 
 {
   environment.systemPackages = with pkgs; [
     cabextract
+    compose2nix.packages.${pkgs.system}.compose2nix
     curl
     ddrescue
     exfatprogs
@@ -18,7 +19,6 @@
     gst_all_1.gst-plugins-good
     gst_all_1.gst-plugins-ugly
     home-manager
-    pkgs.jocalsend
     lshw
     mullvad-vpn
     p7zip
