@@ -25,9 +25,10 @@
     };
   };
   fileSystems."/media" = {
-    device = "/dev/disk/by-uuid/16e95dc7-12da-47bc-90dd-4ec419d895e4";
+    device = "/dev/sda1";
     fsType = "ext4";
     options = [ "defaults" ];
+    noFailOnMountFailure = true;
   };
   systemd.tmpfiles.rules = [
     "d /media 0755 root root -"
