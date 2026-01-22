@@ -84,7 +84,7 @@
   #Tailscale
   services.tailscale = {
     enable = true;
-    useRoutingFeatures = "both";
+    useRoutingFeatures = "server";
   };
   services.jellyfin = {
     enable = true;
