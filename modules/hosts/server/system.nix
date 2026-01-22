@@ -27,7 +27,7 @@
   fileSystems."/media" = {
     device = "/dev/sda1";
     fsType = "ext4";
-    options = [ "defaults" ];
+    options = [ "noauto" "x-systemd.automount" "x-systemd.idle-timeout=60" ];
     neededForBoot = false;
   };
   systemd.tmpfiles.rules = [
