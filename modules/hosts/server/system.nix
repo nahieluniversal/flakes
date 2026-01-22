@@ -82,7 +82,10 @@
     interval = "weekly";
   };
   #Tailscale
-  services.tailscale.enable = true;
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "both";
+  };
   services.jellyfin = {
     enable = true;
     openFirewall = true;
