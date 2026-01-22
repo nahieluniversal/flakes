@@ -28,7 +28,7 @@
     device = "/dev/sda1";
     fsType = "ext4";
     options = [ "defaults" ];
-    noFailOnMountFailure = true;
+    neededForBoot = false;
   };
   systemd.tmpfiles.rules = [
     "d /media 0755 root root -"
