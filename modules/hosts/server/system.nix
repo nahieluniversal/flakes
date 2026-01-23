@@ -93,6 +93,11 @@
   virtualisation.docker = {
   enable = true;
   };
+  services.qbittorrent = {
+    enable = true;
+    openFirewall = true;
+    webuiPort = 8055;
+  };
   # State version
   system.stateVersion = "26.05";
 }
