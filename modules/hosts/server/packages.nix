@@ -19,6 +19,7 @@
     gst_all_1.gst-plugins-ugly
     home-manager
     lshw
+    mkvtoolnix
     mullvad-vpn
     p7zip
     patchelf
