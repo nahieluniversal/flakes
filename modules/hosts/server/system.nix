@@ -102,7 +102,6 @@
     enable = true;
     anonymousUser = false;
     writeEnable = true;
-    chrootLocalUser = false;
   };
   # State version
   system.stateVersion = "26.05";
