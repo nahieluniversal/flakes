@@ -22,6 +22,7 @@
     gimp
     git
     go
+    pkgs.godot
     gst_all_1.gst-libav
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-base
@@ -46,6 +47,7 @@
     lshw
     lshw-gui
     material-icons
+    pkgs.mkvtoolnix
     mullvad-vpn
     p7zip
     patchelf
