@@ -102,6 +102,7 @@
     enable = true;
     anonymousUser = false;
     writeEnable = true;
+    localUsers = true;
   };
   # State version
   system.stateVersion = "26.05";
