@@ -103,6 +103,11 @@
     anonymousUser = false;
     writeEnable = true;
     localUsers = true;
+    extraConfig = ''
+      pasv_enable=YES
+      pasv_min_port=40000
+      pasv_max_port=40100
+    '';
   };
   # State version
   system.stateVersion = "26.05";
