@@ -17,7 +17,9 @@
       upd = "cd /home/olivernix/flakes && nix flake update && futaba";
     };
     shellInit = ''
-      fastfetch
+      if [[ $- == *i* ]]; then
+        fastfetch
+      fi
     '';
   };
 
