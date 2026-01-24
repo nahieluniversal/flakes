@@ -98,6 +98,12 @@
     openFirewall = true;
     webuiPort = 8055;
   };
+  services.vsftpd = {
+    enable = true;
+    anonymousUser = false;
+    writeEnable = true;
+    chrootLocalUser = false;
+  };
   # State version
   system.stateVersion = "26.05";
 }
