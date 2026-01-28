@@ -11,11 +11,14 @@
     Type=Application
   '';
 
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
-  services.displayManager.sddm.settings = {
-    General = {
-      Session = "Hyprland.desktop";
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "where_is_my_sddm_theme_qt5";
+    wayland.enable = true;
+    settings = {
+      General = {
+        Session = "Hyprland.desktop";
+      };
     };
   };
 
