@@ -34,8 +34,10 @@
     "d /media 0755 root root -"
   ];
   # Logind configuration
-  services.logind.lidSwitch = "ignore";
-  services.logind.lidSwitchDocked = "ignore";
+  services.logind.settings.Login = {
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchDocked = "ignore";
+  };
 
   # Timezone and locale
   time.timeZone = "Europe/Madrid";

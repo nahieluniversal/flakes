@@ -13,7 +13,8 @@
 
   services.displayManager.sddm = {
     enable = true;
-    theme = "where_is_my_sddm_theme_qt5";
+    package = pkgs.kdePackages.sddm;  # Usa la versión Qt6 de SDDM
+    theme = "where_is_my_sddm_theme_qt6";
     wayland.enable = true;
     settings = {
       General = {
@@ -21,6 +22,10 @@
       };
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    (where-is-my-sddm-theme.override { variants = [ "qt6" ]; })
+  ];
 
   services.udisks2.enable = true;
 }
