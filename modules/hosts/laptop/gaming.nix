@@ -28,4 +28,5 @@
     winetricks
     wineWowPackages.staging
   ];
+  hardware.xpad-noone.enable = true;
 }

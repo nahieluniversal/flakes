@@ -58,6 +58,7 @@
     ryubing
     samrewritten
     scarab
+    superTuxKart
     swww
     testdisk
     tldr
@@ -71,7 +72,7 @@
     vscode
     waybar
     wget
-    pkgs.where-is-my-sddm-theme
+    where-is-my-sddm-theme
     wl-clipboard
     zenity
     zip
