@@ -24,12 +24,6 @@
       dnsovertls = "true";
     };
   };
-  fileSystems."/media" = {
-    device = "/dev/disk/by-uuid/16e95dc7-12da-47bc-90dd-4ec419d895e4";
-    fsType = "ext4";
-    options = [ "noauto" "x-systemd.automount" "x-systemd.idle-timeout=60" ];
-    neededForBoot = false;
-  };
   systemd.tmpfiles.rules = [
     "d /media 0755 root root -"
   ];
