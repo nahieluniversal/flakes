@@ -47,7 +47,7 @@
     lshw
     lshw-gui
     material-icons
-    pkgs.mkvtoolnix
+    mkvtoolnix
     mullvad-vpn
     p7zip
     patchelf
@@ -72,7 +72,6 @@
     vscode
     waybar
     wget
-    where-is-my-sddm-theme
     wl-clipboard
     zenity
     zip
