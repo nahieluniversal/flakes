@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -69,6 +69,94 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+    XDG_CURRENT_DESKTOP = "Hyprland:KDE";
+    XDG_SESSION_DESKTOP = "Hyprland";
+    XDG_DATA_DIRS = lib.mkDefault (
+      "${config.home.homeDirectory}/.local/share/flatpak/exports/share"
+      + ":/var/lib/flatpak/exports/share"
+      + ":${config.home.homeDirectory}/.nix-profile/share"
+      + ":/etc/profiles/per-user/${config.home.username}/share"
+      + ":/nix/var/nix/profiles/default/share"
+      + ":/run/current-system/sw/share"
+    );
+  };
+
+  home.activation.kbuildsycoca = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    /run/current-system/sw/bin/kbuildsycoca6 || true
+  '';
+
+  xdg.configFile."mimeapps.list".force = true;
+  xdg.configFile."menus/applications.menu".text = ''
+    <!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+      "http://www.freedesktop.org/standards/menu-spec/menu-1.0.dtd">
+    <Menu>
+      <Name>Applications</Name>
+      <DefaultAppDirs/>
+      <DefaultDirectoryDirs/>
+      <DefaultMergeDirs/>
+    </Menu>
+  '';
+
+  xdg = {
+    enable = true;
+    mimeApps = {
+      enable = true;
+      defaultApplications = {
+        "inode/directory" = [ "org.kde.dolphin.desktop" ];
+
+        "text/plain" = [ "org.kde.kate.desktop" ];
+
+        "application/pdf" = [ "org.kde.okular.desktop" ];
+
+        "image/png" = [ "feh.desktop" ];
+        "image/jpeg" = [ "feh.desktop" ];
+        "image/webp" = [ "feh.desktop" ];
+
+        "audio/mpeg" = [ "vlc.desktop" ];
+        "audio/flac" = [ "vlc.desktop" ];
+        "audio/ogg" = [ "vlc.desktop" ];
+        "video/mp4" = [ "vlc.desktop" ];
+        "video/x-matroska" = [ "vlc.desktop" ];
+        "video/x-msvideo" = [ "vlc.desktop" ];
+
+        "application/zip" = [ "org.kde.ark.desktop" ];
+        "application/x-7z-compressed" = [ "org.kde.ark.desktop" ];
+        "application/x-rar" = [ "org.kde.ark.desktop" ];
+        "application/x-tar" = [ "org.kde.ark.desktop" ];
+
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = [ "libreoffice-writer.desktop" ];
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" = [ "libreoffice-calc.desktop" ];
+        "application/vnd.openxmlformats-officedocument.presentationml.presentation" = [ "libreoffice-impress.desktop" ];
+      };
+
+      associations = {
+        added = {
+          "text/plain" = [ "org.kde.kate.desktop" "code.desktop" ];
+
+          "application/pdf" = [ "org.kde.okular.desktop" ];
+
+          "image/png" = [ "feh.desktop" "gimp.desktop" ];
+          "image/jpeg" = [ "feh.desktop" "gimp.desktop" ];
+          "image/webp" = [ "feh.desktop" "gimp.desktop" ];
+
+          "audio/mpeg" = [ "vlc.desktop" ];
+          "audio/flac" = [ "vlc.desktop" ];
+          "audio/ogg" = [ "vlc.desktop" ];
+          "video/mp4" = [ "vlc.desktop" ];
+          "video/x-matroska" = [ "vlc.desktop" ];
+          "video/x-msvideo" = [ "vlc.desktop" ];
+
+          "application/zip" = [ "org.kde.ark.desktop" ];
+          "application/x-7z-compressed" = [ "org.kde.ark.desktop" ];
+          "application/x-rar" = [ "org.kde.ark.desktop" ];
+          "application/x-tar" = [ "org.kde.ark.desktop" ];
+
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = [ "libreoffice-writer.desktop" ];
+          "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" = [ "libreoffice-calc.desktop" ];
+          "application/vnd.openxmlformats-officedocument.presentationml.presentation" = [ "libreoffice-impress.desktop" ];
+        };
+      };
+    };
   };
 
   wayland.windowManager.hyprland = {
@@ -115,7 +203,6 @@
 
       env = [
         "QT_QPA_PLATFORMTHEME,qt6ct"
-        "XDG_MENU_PREFIX,arch-"
         "XCURSOR_THEME,miku-cursor-linux"
         "XCURSOR_SIZE,24"
         "HYPRCURSOR_SIZE,24"
