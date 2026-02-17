@@ -71,6 +71,7 @@
     # EDITOR = "emacs";
     XDG_CURRENT_DESKTOP = "Hyprland:KDE";
     XDG_SESSION_DESKTOP = "Hyprland";
+    XDG_MENU_PREFIX = "";
     XDG_DATA_DIRS = lib.mkDefault (
       "${config.home.homeDirectory}/.local/share/flatpak/exports/share"
       + ":/var/lib/flatpak/exports/share"

@@ -8,6 +8,7 @@
     ayugram-desktop
     baobab
     cabextract
+    calibre
     cliphist
     curl
     davinci-resolve-studio
@@ -48,6 +49,7 @@
     lshw-gui
     material-icons
     mkvtoolnix
+    mpv
     mullvad-vpn
     p7zip
     patchelf
