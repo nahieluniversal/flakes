@@ -63,7 +63,7 @@
     superTuxKart
     swww
     testdisk
-    tldr
+    tealdeer
     unrar
     unzip
     usbutils
