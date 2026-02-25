@@ -24,9 +24,6 @@
       dnsovertls = "true";
     };
   };
-  systemd.tmpfiles.rules = [
-    "d /media 0755 root root -"
-  ];
   # Logind configuration
   services.logind.settings.Login = {
     HandleLidSwitch = "ignore";

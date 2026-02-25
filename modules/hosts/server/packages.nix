@@ -46,11 +46,4 @@
     enable = true;
     package = pkgs.mullvad-vpn;
   };
-
-#  services.syncthing = {
-#    enable = true;
-#    openDefaultPorts = true;
-#    overrideDevices = false;
-#    overrideFolders = false;
-#  };
 }
