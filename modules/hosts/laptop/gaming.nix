@@ -26,7 +26,7 @@
     prismlauncher
     protontricks
     winetricks
-    wineWowPackages.staging
+    wineWow64Packages.staging
   ];
   hardware.xpad-noone.enable = true;
 }
