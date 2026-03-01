@@ -51,6 +51,7 @@
     mkvtoolnix
     mpv
     mullvad-vpn
+    olympus
     p7zip
     patchelf
     pavucontrol
