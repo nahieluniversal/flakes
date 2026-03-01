@@ -7,6 +7,7 @@
     alacritty
     ayugram-desktop
     baobab
+    brightnessctl
     cabextract
     calibre
     cliphist
