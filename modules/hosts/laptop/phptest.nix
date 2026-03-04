@@ -20,7 +20,7 @@
     };
   };
 
-  services.phpfpm.phpPackage = pkgs.php;
+  services.phpfpm.phpPackage = pkgs.php82;
 
   services.mysql = {
     enable = true;
