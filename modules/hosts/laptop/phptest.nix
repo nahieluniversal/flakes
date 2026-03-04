@@ -4,6 +4,7 @@
   services.httpd = {
     enable = true;
     enablePHP = true;
+    phpPackage = pkgs.php82;  # Añadir esta línea
     
     adminAddr = "admin@localhost";
     
