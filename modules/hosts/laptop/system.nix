@@ -67,6 +67,7 @@
     fileSystems = [ "/home" ];
     interval = "weekly";
   };
+  programs.nix-ld.enable = true;
   services.tailscale.enable = true;
   # State version
   system.stateVersion = "25.11";

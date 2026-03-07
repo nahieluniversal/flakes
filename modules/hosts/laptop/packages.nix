@@ -56,6 +56,7 @@
     p7zip
     patchelf
     pavucontrol
+    pdfchain
     qbittorrent
     rar
     rofi
