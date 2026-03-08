@@ -73,7 +73,6 @@
     vencord
     vesktop
     vim
-    vlc
     vscode
     waybar
     wget
