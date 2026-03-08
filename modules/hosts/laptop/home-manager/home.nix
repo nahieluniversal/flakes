@@ -113,12 +113,12 @@
         "image/jpeg" = [ "feh.desktop" ];
         "image/webp" = [ "feh.desktop" ];
 
-        "audio/mpeg" = [ "vlc.desktop" ];
-        "audio/flac" = [ "vlc.desktop" ];
-        "audio/ogg" = [ "vlc.desktop" ];
-        "video/mp4" = [ "vlc.desktop" ];
-        "video/x-matroska" = [ "vlc.desktop" ];
-        "video/x-msvideo" = [ "vlc.desktop" ];
+        "audio/mpeg" = [ "mpv.desktop" ];
+        "audio/flac" = [ "mpv.desktop" ];
+        "audio/ogg" = [ "mpv.desktop" ];
+        "video/mp4" = [ "mpv.desktop" ];
+        "video/x-matroska" = [ "mpv.desktop" ];
+        "video/x-msvideo" = [ "mpv.desktop" ];
 
         "application/zip" = [ "org.kde.ark.desktop" ];
         "application/x-7z-compressed" = [ "org.kde.ark.desktop" ];
@@ -140,12 +140,12 @@
           "image/jpeg" = [ "feh.desktop" "gimp.desktop" ];
           "image/webp" = [ "feh.desktop" "gimp.desktop" ];
 
-          "audio/mpeg" = [ "vlc.desktop" ];
-          "audio/flac" = [ "vlc.desktop" ];
-          "audio/ogg" = [ "vlc.desktop" ];
-          "video/mp4" = [ "vlc.desktop" ];
-          "video/x-matroska" = [ "vlc.desktop" ];
-          "video/x-msvideo" = [ "vlc.desktop" ];
+          "audio/mpeg" = [ "mpv.desktop" ];
+          "audio/flac" = [ "mpv.desktop" ];
+          "audio/ogg" = [ "mpv.desktop" ];
+          "video/mp4" = [ "mpv.desktop" ];
+          "video/x-matroska" = [ "mpv.desktop" ];
+          "video/x-msvideo" = [ "mpv.desktop" ];
 
           "application/zip" = [ "org.kde.ark.desktop" ];
           "application/x-7z-compressed" = [ "org.kde.ark.desktop" ];
