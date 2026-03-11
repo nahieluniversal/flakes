@@ -104,16 +104,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1773260780,
-        "narHash": "sha256-naWCj4zxjx1dvkfeE0bF09IzoYBYMuiQpIHahqw0uH8=",
+        "lastModified": 1773261509,
+        "narHash": "sha256-lTRDRbPdj85kQdrbJgdEFHLzSHxvbv1z5h/2RFNhbZo=",
         "owner": "nahieluniversal",
-        "repo": "opforjellyfin_nix",
-        "rev": "eb079b0ba612b142343ccfe98fd6d5187aedefa0",
+        "repo": "opforjellyfin",
+        "rev": "1f9bc3b19320c8844a22dcbced4fa4a5896563f4",
         "type": "github"
       },
       "original": {
         "owner": "nahieluniversal",
-        "repo": "opforjellyfin_nix",
+        "repo": "opforjellyfin",
         "type": "github"
       }
     },

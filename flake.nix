@@ -12,7 +12,7 @@
     inputs.nixpkgs.follows = "nixpkgs";
     };
     opforjellyfin = {
-    url = "github:nahieluniversal/opforjellyfin_nix";
+    url = "github:nahieluniversal/opforjellyfin";
     inputs.nixpkgs.follows = "nixpkgs";
     };
   };
