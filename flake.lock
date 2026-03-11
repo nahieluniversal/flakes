@@ -97,10 +97,31 @@
         "type": "github"
       }
     },
+    "opforjellyfin": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1773260780,
+        "narHash": "sha256-naWCj4zxjx1dvkfeE0bF09IzoYBYMuiQpIHahqw0uH8=",
+        "owner": "nahieluniversal",
+        "repo": "opforjellyfin_nix",
+        "rev": "eb079b0ba612b142343ccfe98fd6d5187aedefa0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nahieluniversal",
+        "repo": "opforjellyfin_nix",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "compose2nix": "compose2nix",
         "nixpkgs": "nixpkgs",
+        "opforjellyfin": "opforjellyfin",
         "zen-browser": "zen-browser"
       }
     },

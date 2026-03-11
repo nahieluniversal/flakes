@@ -11,8 +11,12 @@
     url = "github:aksiksi/compose2nix";
     inputs.nixpkgs.follows = "nixpkgs";
     };
+    opforjellyfin = {
+    url = "github:nahieluniversal/opforjellyfin_nix";
+    inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs, zen-browser, compose2nix, ... }:
+  outputs = { self, nixpkgs, zen-browser, compose2nix, opforjellyfin, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -23,7 +27,7 @@
       mkHost = hostName: nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
-          inherit pkgs system zen-browser compose2nix;
+          inherit pkgs system zen-browser compose2nix opforjellyfin;
         };
         modules = [
           ./modules/hosts/${hostName}/configuration.nix

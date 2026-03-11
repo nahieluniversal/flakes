@@ -63,7 +63,7 @@
     ryubing
     samrewritten
     scarab
-    superTuxKart
+    supertuxkart
     swww
     testdisk
     tealdeer
