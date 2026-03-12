@@ -67,6 +67,7 @@
     swww
     testdisk
     tealdeer
+    tree
     unrar
     unzip
     usbutils

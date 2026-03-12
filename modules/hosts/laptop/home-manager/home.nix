@@ -313,7 +313,7 @@
         "$mainMod, F, togglefloating,"
         "$mainMod, R, exec, $menu"
         "$mainMod, J, togglesplit,"
-        "$mainMod, space , exec, rofi -show run"
+        "$mainMod, space , exec, rofi -show run -theme DarkBlue.rasi"
         "$mainMod, W, exec, zen"
         ", PRINT,exec, hyprshot -m region -o /home/olivernix/Pictures/Screenshots"
         "shift, PRINT, exec, hyprshot -m window -o /home/olivernix/Pictures/Screenshots"
