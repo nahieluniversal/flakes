@@ -23,14 +23,14 @@
   virtualisation.oci-containers.containers."shoko_server" = {
     image = "ghcr.io/shokoanime/server:latest";
     environment = {
-      "PGID" = "";
-      "PUID" = "";
+      "PGID" = "1000";
+      "PUID" = "1000";
       "TZ" = "Etc/GMT-1";
     };
     volumes = [
-      "/home/olivernix/arch_bak/home/oliverlin/shoko_server/shoko-config:/home/shoko/.shoko:rw"
-      "/media/Monogatari Series:/mg:rw"
-      "/media/anime:/anime:rw"
+      "/home/olivernix/shoko_server/shoko-config:/home/shoko/.shoko:rw"
+      "/run/media/olivernix/16e95dc7-12da-47bc-90dd-4ec419d895e4/Monogatari Series:/mg:rw"
+#     "/run/media/olivernix/16e95dc7-12da-47bc-90dd-4ec419d895e4/anime:/anime:rw"
     ];
     ports = [
       "8111:8111/tcp"
