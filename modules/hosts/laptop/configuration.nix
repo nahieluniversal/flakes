@@ -29,6 +29,6 @@
     ../../programs/zen.nix
     ../../programs/opforjellyfin.nix
     # Servers
-    ./docker-compose.nix
+    ./servers.nix
   ];
 }
