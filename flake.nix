@@ -32,7 +32,7 @@
     in {
       nixosConfigurations = {
         laptop = mkHost "laptop";
-        server = mkHost "server";
+#       server = mkHost "server";
       };
     };
 }

@@ -11,7 +11,7 @@
   # Networking
   networking.hostName = "laptop";
   networking.networkmanager.enable = true;
-  networking.firewall.allowedTCPPorts = [ 80 443 1401 2200 47984 47989 47990 48010 53317 53318 ];
+  networking.firewall.allowedTCPPorts = [ 22 80 443 1401 2200 47984 47989 47990 48010 53317 53318 ];
   networking.firewall.allowedUDPPorts = [ 53 1194 1195 1196 1197 1300 1301 1302 1303 1400 47984 47989 47990 48010 53317 53318 ];
   networking.nameservers = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
 
@@ -24,7 +24,14 @@
       dnsovertls = "true";
     };
   };
+   # Laptop Lid Config (Comment to enable suspend on lid close)
+   services.logind.settings.Login = {
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchDocked = "ignore";
+   };
   services.xserver.enable = true;
+  #OpenSSH
+  services.openssh.enable = true;
   # Timezone and locale
   time.timeZone = "Europe/Madrid";
   i18n.defaultLocale = "es_ES.UTF-8";
@@ -69,6 +76,10 @@
   };
   programs.nix-ld.enable = true;
   services.tailscale.enable = true;
+  services.jellyfin = {
+     enable = true;
+     openFirewall = true;
+   };
   # State version
   system.stateVersion = "25.11";
 }

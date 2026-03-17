@@ -17,8 +17,10 @@
       jds = "docker start jdownloader-2";
       upd = "cd /home/olivernix/flakes && nix flake update && futaba";
     };
-    shellInit = ''
-      fastfetch
+   shellInit = ''
+      if [[ $- == *i* ]]; then
+        fastfetch
+      fi
     '';
   };
 

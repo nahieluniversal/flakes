@@ -9,9 +9,6 @@
   users.extraGroups.vboxusers.members = [ "olivernix" ];
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
-  # Docker
-  virtualisation.docker.enable = true;
-
   # Waydroid
   virtualisation.waydroid = {
     enable = true;

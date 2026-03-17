@@ -28,5 +28,7 @@
     # Common programs from flakes
     ../../programs/zen.nix
     ../../programs/opforjellyfin.nix
+    # Servers
+    ./docker-compose.nix
   ];
 }
