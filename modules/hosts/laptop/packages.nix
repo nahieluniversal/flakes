@@ -11,6 +11,7 @@
     cabextract
     calibre
     cliphist
+    compose2nix
     curl
     davinci-resolve-studio
     ddrescue
