@@ -5,6 +5,7 @@
     adwaita-icon-theme
     android-tools
     alacritty
+    aria2
     ayugram-desktop
     baobab
     brightnessctl
