@@ -80,6 +80,7 @@
     waybar
     wget
     wl-clipboard
+    yt-dlp
     zenity
     zip
     zoxide
