@@ -1,12 +1,24 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, nix-cachyos-kernel, ... }:
 
 {
+  nixpkgs.overlays = [
+              # Use nixpkgs from your environment, nixpkgs.config will apply.
+              # Has small chance of kernel modules not being compatible with kernel version.
+              nix-cachyos-kernel.overlays.default
+
+              # Alternatively, use the exact nixpkgs revison as defined in this repo.
+              # Guarantees you have binary cache, but initializes another nixpkgs instance.
+              # nix-cachyos-kernel.overlays.pinned
+
+              # Only use one of the two overlays!
+            ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages;
+  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto-x86_64-v3;
+  boot.kernelParams = [ "sched=bore" ];
 
   # Networking
   networking.hostName = "laptop";
