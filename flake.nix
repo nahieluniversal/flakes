@@ -37,6 +37,7 @@
     in {
       nixosConfigurations = {
         laptop = mkHost "laptop";
+        legionGo = mkHost "legos";
 #       server = mkHost "server";
       };
     };

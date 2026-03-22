@@ -58,8 +58,19 @@ AppIds:
   - 388090
 #It takes two
   - 1426210
+#Danganronpa 1
+  - 413410
+#Danganronpa 2X2
+  - 3751230
+#Danganronpa 2
+  - 413420
+#Danganronpa V3
+  - 567640
+  - 707390
 #Beholder 2
   - 761620
+#Wagotabi
+  - 2701720
 #Enables playing of not owned games. Respects black-/whitelist AppIds
 PlayNotOwnedGames: no
 #Additional AppIds to inject (Overrides your black-/whitelist & also overrides OwnerIds for apps you got shared!) Best to use this only on games NOT in your library.
@@ -85,13 +96,19 @@ AdditionalApps:
   - 354140
   - 1426210
   - 388090
+  - 413410
   - 761620
+  - 2701720
+  - 567640
+  - 707390
+  - 3751230
+  - 413420
 #Extra Data for Dlcs belonging to a specific AppId. Only needed
 #when the App you're playing is hit by Steams 64 DLC limit
 DlcData:
 #Automatically disable SLSsteam when steamclient.so does not match a predefined file hash that is known to work
 #You should enable this if you're planing to use SLSsteam with Steam Deck's gamemode
-SafeMode: no
+SafeMode: yes
 #Warn user via notification when steamclient.so hash differs from known safe hash
 #Mostly useful for development so I don't accidentally miss an update
 WarnHashMissmatch: no

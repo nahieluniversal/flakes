@@ -59,6 +59,7 @@
     patchelf
     pavucontrol
     pdfchain
+    protonup-qt
     qbittorrent
     rar
     rofi
