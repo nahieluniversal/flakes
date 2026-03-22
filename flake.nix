@@ -19,17 +19,18 @@
   outputs = { self, nixpkgs, zen-browser, opforjellyfin, nix-cachyos-kernel, ... }:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
       
       mkHost = hostName: nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
-          inherit pkgs system zen-browser opforjellyfin nix-cachyos-kernel;
+          inherit system zen-browser opforjellyfin nix-cachyos-kernel;
         };
         modules = [
+          ({ config, ... }: {
+            nixpkgs.overlays = [
+              nix-cachyos-kernel.overlays.default
+            ];
+          })
           ./modules/hosts/${hostName}/configuration.nix
         ];
       };
