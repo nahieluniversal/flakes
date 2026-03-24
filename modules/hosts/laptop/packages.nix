@@ -38,6 +38,7 @@
     hyprpaper
     hyprpolkitagent
     hyprshot
+    jdk21
     kdePackages.kate
     kdePackages.dolphin
     kdePackages.kservice
