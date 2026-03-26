@@ -19,6 +19,7 @@
     edl
     exfatprogs
     fastfetch
+    kdePackages.fcitx5-configtool
     feh
     ffmpeg
     filezilla

@@ -48,7 +48,14 @@
     LC_TELEPHONE = "es_ES.UTF-8";
     LC_TIME = "es_ES.UTF-8";
   };
-
+  i18n.inputMethod = {  
+    enable = true;
+    type = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-mozc
+      fcitx5-gtk
+    ];
+  };
   console.keyMap = "es";
 
   # Nix settings
