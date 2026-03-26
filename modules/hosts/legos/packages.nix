@@ -2,28 +2,34 @@
 
 {
   environment.systemPackages = with pkgs; [
-    git
-    wget
-    curl
-    htop
-    tmux
-    vim
-    sudo
-    libinput
-    xdotool
-    evtest
-    pavucontrol
-    pipewire-pulse
-    lsof
-    glxinfo
-    vulkan-tools
-    mesa-demos
-    networkmanager
-    iw
-    powertop
     acpi
     alacritty
+    curl
+    dejavu_fonts
+    evtest
+    git
+    glxinfo
+    htop
+    iw
+    kdePackages.kate
+    kdePackages.dolphin
+    kdePackages.kservice
+    kdePackages.ark
+    kdePackages.okular
+    kdePackages.partitionmanager
+    libinput
+    lsof
+    mesa-demos
+    networkmanager
     nvtop
+    pavucontrol
+    pipewire-pulse
+    powertop
+    sudo
+    vim
+    vulkan-tools
+    wget
+    xdotool
   ];
 
   fonts.packages = with pkgs; [

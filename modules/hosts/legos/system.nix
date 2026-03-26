@@ -4,7 +4,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.timeout = 3;
-  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-lts-lto;
+  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-deckify-lts-lto;
   boot.kernelParams = [ 
     "sched=bore"
     "amd_pmc.enable_restore=0" 
@@ -17,7 +17,7 @@
     options snd_hda_intel enable_msi=1
   '';
 
-  networking.hostName = "legionGo";
+  networking.hostName = "legos";
   networking.networkmanager.enable = true;
   networking.firewall.enable = true;
   services.openssh.enable = true;
