@@ -15,15 +15,20 @@
       url = "github:xddxdd/nix-cachyos-kernel/release";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    jovian = {
+      url = "github:Jovian-Experiments/Jovian-NixOS/development";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs, zen-browser, opforjellyfin, nix-cachyos-kernel, ... }:
+
+  outputs = { self, nixpkgs, zen-browser, opforjellyfin, nix-cachyos-kernel, jovian, ... }:
     let
       system = "x86_64-linux";
-      
-      mkHost = hostName: nixpkgs.lib.nixosSystem {
+
+      mkHost = hostName: extraModules: nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
-          inherit system zen-browser opforjellyfin nix-cachyos-kernel;
+          inherit system zen-browser opforjellyfin nix-cachyos-kernel jovian;
         };
         modules = [
           ({ config, ... }: {
@@ -31,14 +36,17 @@
               nix-cachyos-kernel.overlays.default
             ];
           })
+        ] ++ extraModules ++ [
           ./modules/hosts/${hostName}/configuration.nix
         ];
       };
     in {
       nixosConfigurations = {
-        laptop = mkHost "laptop";
-        legionGo = mkHost "legos";
-#       server = mkHost "server";
+        laptop = mkHost "laptop" [];
+        legionGo = mkHost "legos" [
+          jovian.nixosModules.default
+        ];
+#       server = mkHost "server" [];
       };
     };
 }
