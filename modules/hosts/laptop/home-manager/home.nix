@@ -201,6 +201,9 @@
       ];
 
       env = [
+        "XMODIFIERS,@im=fcitx"
+        "SDL_IM_MODULE,fcitx"
+        "GLFW_IM_MODULE,fcitx"
         "QT_QPA_PLATFORMTHEME,qt6ct"
         "XCURSOR_THEME,miku-cursor-linux"
         "XCURSOR_SIZE,24"

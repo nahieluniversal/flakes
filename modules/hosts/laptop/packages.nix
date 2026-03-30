@@ -53,6 +53,7 @@
     lshw
     lshw-gui
     material-icons
+    megabasterd
     mkvtoolnix
     mpv
     mullvad-vpn
