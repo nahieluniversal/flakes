@@ -12,9 +12,7 @@
     shellAliases = {
       futaba = "sudo nixos-rebuild switch --flake /home/olivernix/flakes/#laptop";
       hms = "home-manager switch --flake /home/olivernix/flakes/modules/hosts/laptop/home-manager#olivernix";
-      cd = "z";
       ncg = "sudo nix-collect-garbage -d";
-      jds = "docker start jdownloader-2";
       upd = "cd /home/olivernix/flakes && nix flake update && futaba";
     };
    shellInit = ''

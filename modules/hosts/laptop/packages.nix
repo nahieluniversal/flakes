@@ -86,7 +86,6 @@
     yt-dlp
     zenity
     zip
-    zoxide
   ];
 
   fonts.packages = with pkgs; [

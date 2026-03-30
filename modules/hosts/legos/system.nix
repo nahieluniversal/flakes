@@ -4,14 +4,11 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.timeout = 3;
-  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-deckify-lts-lto;
+  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-deckify-lto;
   boot.kernelParams = [ 
     "sched=bore"
-    "amd_pmc.enable_restore=0" 
-    "pcie_aspm=off"
     "quiet"
-    "splash"
-    "console=/dev/null"              
+    "splash"           
   ];
 
   boot.extraModprobeConfig = ''
@@ -59,6 +56,7 @@
     alsa.enable = true;
     pulse.enable = true;
   };
+  services.desktopManager.plasma6.enable = true;
   # Clean Quiet Boot
   boot = {
     plymouth.enable = true;
@@ -69,23 +67,19 @@
       enable = true;
       capSysNice = true;
     };
-    steam.gamescopeSession.enable = true;
   };
 
-  # Gamescope Auto Boot from TTY (nix docs test)
-  services = {
-    xserver.enable = true;
-    getty.autologinUser = <"legos">;
-    greetd = {
+  jovian = {
+    steam = {
       enable = true;
-      settings = {
-        default_session = {
-          command = "${lib.getExe pkgs.gamescope} -W 1920 -H 1200 -f -e --xwayland-count 2 --hdr-enabled --hdr-itm-enabled -- steam -pipewire-dmabuf -gamepadui -steamdeck -steamos3 > /dev/null 2>&1";
-          user = <"legos">;
-        };
-      };
+      autoStart = true;
+      user = "legos";
+      desktopSession = "plasma";
     };
+    decky-loader.enable = true;
+    steamos.useSteamOSConfig = true;
   };
+
   programs.dconf.enable = true;
   system.stateVersion = "26.05";
 }

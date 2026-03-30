@@ -4,7 +4,6 @@
 {
 
   services.libinput.enable = true;
-  services.libinput.touchpad.enabled = true;
   
   services.xserver = {
     videoDrivers = [ "modesetting" ];
@@ -29,10 +28,6 @@
       RADEON_POWER_PROFILE_ON_AC = "high";
       RADEON_POWER_PROFILE_ON_BAT = "low";
     };
-  };
-
-  services.battery-manager = {
-    enable = true;
   };
 
   services.throttled.enable = true;
