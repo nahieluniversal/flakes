@@ -7,7 +7,7 @@
     ohMyZsh = {
       enable = true;
       theme = "agnoster";
-      plugins = [ "git" "docker" "docker-compose" "kubectl" "kubectx" "z" "zoxide" ];
+      plugins = [ "git" "docker" "docker-compose" "kubectl" "kubectx" ];
     };
     shellAliases = {
       futaba = "sudo nixos-rebuild switch --flake /home/olivernix/flakes/#laptop";
