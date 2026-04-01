@@ -6,6 +6,7 @@
  services.shoko = {
     enable = true;
     openFirewall = true;
+    plugins = [ pkgs.avdump3];
   };
   # To prevent shoko and jellyfin from starting  automatically
   systemd.services.shoko.wantedBy = lib.mkForce [ ];
