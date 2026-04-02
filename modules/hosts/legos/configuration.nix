@@ -14,7 +14,7 @@
     
     # Packages & Services
     ./packages.nix
-    ./../programs/zen.nix
+    ./../../programs/zen.nix
     # Gaming
     ./gaming.nix
   ];
