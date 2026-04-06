@@ -7,6 +7,7 @@
     alacritty
     aria2
     ayugram-desktop
+    awww
     baobab
     brightnessctl
     cabextract
@@ -16,6 +17,7 @@
     curl
     davinci-resolve-studio
     ddrescue
+    distrobox
     edl
     exfatprogs
     fastfetch
@@ -70,7 +72,6 @@
     samrewritten
     scarab
     supertuxkart
-    swww
     testdisk
     tealdeer
     tree
@@ -94,7 +95,7 @@
   ];
 
   services.flatpak.enable = true;
-
+  programs.ydotool.enable = true;
   services.mullvad-vpn = {
     enable = true;
     package = pkgs.mullvad-vpn;
