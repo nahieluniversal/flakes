@@ -114,3 +114,9 @@ SafeMode: yes
 WarnHashMissmatch: no
 #Logs all calls to Steamworks (this makes the logfile huge! Only useful for debugging/analyzing
 ExtendedLogging: no
+IdleStatus:
+    AppId: 413420
+    Title: "Danganronpa 2: Goodbye Despair"
+UnownedStatus:
+  AppId: 413420
+  Title: "Danganronpa 2: Goodbye Despair"

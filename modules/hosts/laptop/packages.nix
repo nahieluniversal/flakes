@@ -6,6 +6,7 @@
     android-tools
     alacritty
     aria2
+    aseprite
     ayugram-desktop
     awww
     baobab
