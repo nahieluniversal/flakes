@@ -20,6 +20,7 @@
     ddrescue
     distrobox
     edl
+    eden
     exfatprogs
     fastfetch
     kdePackages.fcitx5-configtool
@@ -42,6 +43,7 @@
     hyprpaper
     hyprpolkitagent
     hyprshot
+    itch
     jdk21
     kdePackages.kate
     kdePackages.dolphin
