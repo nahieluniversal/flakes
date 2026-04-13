@@ -7,6 +7,10 @@
     enable = true;
     openFirewall = true;
   };
+  services.jackett = {
+    enable = true;
+    openFirewall = true;
+  };
   environment.systemPackages = with pkgs; [
     avdump3
   ];
