@@ -67,6 +67,8 @@ AppIds:
 #Danganronpa V3
   - 567640
   - 707390
+#Danganronpa S
+  - 1691970
 #Beholder 2
   - 761620
 #Wagotabi
@@ -109,6 +111,7 @@ AdditionalApps:
   - 413420
   - 2319990
   - 2694280
+  - 1691970
 #Extra Data for Dlcs belonging to a specific AppId. Only needed
 #when the App you're playing is hit by Steams 64 DLC limit
 DlcData:
@@ -120,9 +123,3 @@ SafeMode: yes
 WarnHashMissmatch: no
 #Logs all calls to Steamworks (this makes the logfile huge! Only useful for debugging/analyzing
 ExtendedLogging: no
-IdleStatus:
-    AppId: 413420
-    Title: "Danganronpa 2: Goodbye Despair"
-UnownedStatus:
-  AppId: 413420
-  Title: "Danganronpa 2: Goodbye Despair"
