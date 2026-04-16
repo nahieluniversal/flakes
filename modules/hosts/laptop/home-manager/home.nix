@@ -181,8 +181,8 @@
         "hyprnotify"
         "hyprpaper"
         "waybar"
-        "awww-daemon"
-        "awww img \"/home/olivernix/.steam/steam/steamapps/common/Paper Lily - Chapter 1/EXTRA/Wallpapers/wp_poll_2024.png\""
+        "swww-daemon"
+        "swww img \"/home/olivernix/.steam/steam/steamapps/common/Paper Lily - Chapter 1/EXTRA/Wallpapers/wp_poll_2024.png\""
         "qbittorrent"
         "kdeconnectd"
         "fcitx5"
@@ -201,9 +201,6 @@
       ];
 
       env = [
-        "XMODIFIERS,@im=fcitx"
-        "SDL_IM_MODULE,fcitx"
-        "GLFW_IM_MODULE,fcitx"
         "QT_QPA_PLATFORMTHEME,qt6ct"
         "XCURSOR_THEME,miku-cursor-linux"
         "XCURSOR_SIZE,24"

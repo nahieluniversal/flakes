@@ -41,8 +41,6 @@
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
     auto-optimise-store = true;
-    substituters = [ "https://attic.xuyh0120.win/lantian" ];
-    trusted-public-keys = [ "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" ];
   };
 
   nix.gc = {
@@ -62,6 +60,13 @@
   # Clean Quiet Boot
   boot = {
     plymouth.enable = true;
+  };
+
+  programs = {
+    gamescope = {
+      enable = true;
+      capSysNice = true;
+    };
   };
 
   jovian = {

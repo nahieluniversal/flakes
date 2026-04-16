@@ -3,6 +3,14 @@
 {
   programs.hyprland.enable = true;
 
+  environment.etc."wayland-sessions/Hyprland.desktop".text = ''
+    [Desktop Entry]
+    Name=Hyprland
+    Comment=Hyprland Wayland compositor
+    Exec=dbus-run-session Hyprland
+    Type=Application
+  '';
+
   services.displayManager.sddm = {
     enable = true;
     package = pkgs.kdePackages.sddm;  # Usa la versión Qt6 de SDDM
@@ -11,6 +19,11 @@
       pkgs.qt6.qt5compat
     ];
     wayland.enable = false;
+    settings = {
+      General = {
+        Session = "Hyprland.desktop";
+      };
+    };
   };
 
   environment.systemPackages = [

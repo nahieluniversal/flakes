@@ -6,9 +6,7 @@
     android-tools
     alacritty
     aria2
-    aseprite
     ayugram-desktop
-    awww
     baobab
     brightnessctl
     cabextract
@@ -18,9 +16,7 @@
     curl
     davinci-resolve-studio
     ddrescue
-    distrobox
     edl
-    eden
     exfatprogs
     fastfetch
     kdePackages.fcitx5-configtool
@@ -43,7 +39,6 @@
     hyprpaper
     hyprpolkitagent
     hyprshot
-    itch
     jdk21
     kdePackages.kate
     kdePackages.dolphin
@@ -58,7 +53,6 @@
     lshw
     lshw-gui
     material-icons
-    megabasterd
     mkvtoolnix
     mpv
     mullvad-vpn
@@ -75,6 +69,7 @@
     samrewritten
     scarab
     supertuxkart
+    swww
     testdisk
     tealdeer
     tree
@@ -98,7 +93,7 @@
   ];
 
   services.flatpak.enable = true;
-  programs.ydotool.enable = true;
+
   services.mullvad-vpn = {
     enable = true;
     package = pkgs.mullvad-vpn;

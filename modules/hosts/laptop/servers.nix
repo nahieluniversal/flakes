@@ -7,13 +7,6 @@
     enable = true;
     openFirewall = true;
   };
-  services.jackett = {
-    enable = true;
-    openFirewall = true;
-  };
-  environment.systemPackages = with pkgs; [
-    avdump3
-  ];
   # To prevent shoko and jellyfin from starting  automatically
   systemd.services.shoko.wantedBy = lib.mkForce [ ];
   systemd.services.jellyfin.wantedBy = lib.mkForce [ ];

@@ -67,16 +67,10 @@ AppIds:
 #Danganronpa V3
   - 567640
   - 707390
-#Danganronpa S
-  - 1691970
 #Beholder 2
   - 761620
 #Wagotabi
   - 2701720
-#Project Kat: Paper Lily Prologue Support Pack
-  - 2319990
-#Paper Lily Ch. 1 Soundtrack
-  - 2694280
 #Enables playing of not owned games. Respects black-/whitelist AppIds
 PlayNotOwnedGames: no
 #Additional AppIds to inject (Overrides your black-/whitelist & also overrides OwnerIds for apps you got shared!) Best to use this only on games NOT in your library.
@@ -109,15 +103,12 @@ AdditionalApps:
   - 707390
   - 3751230
   - 413420
-  - 2319990
-  - 2694280
-  - 1691970
 #Extra Data for Dlcs belonging to a specific AppId. Only needed
 #when the App you're playing is hit by Steams 64 DLC limit
 DlcData:
 #Automatically disable SLSsteam when steamclient.so does not match a predefined file hash that is known to work
 #You should enable this if you're planing to use SLSsteam with Steam Deck's gamemode
-SafeMode: no
+SafeMode: yes
 #Warn user via notification when steamclient.so hash differs from known safe hash
 #Mostly useful for development so I don't accidentally miss an update
 WarnHashMissmatch: no

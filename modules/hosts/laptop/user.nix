@@ -7,7 +7,7 @@
     ohMyZsh = {
       enable = true;
       theme = "agnoster";
-      plugins = [ "git" "docker" "docker-compose" "kubectl" "kubectx" ];
+      plugins = [ "git" "docker" "docker-compose" "kubectl" "kubectx" "z" "zoxide" ];
     };
     shellAliases = {
       futaba = "sudo nixos-rebuild switch --flake /home/olivernix/flakes/#laptop";
@@ -26,7 +26,7 @@
   users.users.olivernix = {
     isNormalUser = true;
     description = "olivernix";
-    extraGroups = [ "networkmanager" "wheel" "video" "docker" "plugdev" "audio" "openrazer" "ydotool" "input" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "docker" "plugdev" "audio" "openrazer" ];
     packages = with pkgs; [ ];
     shell = pkgs.zsh;
   };

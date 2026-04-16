@@ -7,14 +7,8 @@
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto-x86_64-v3;
-  boot.kernelModules = [ "uinput" ];
   boot.kernelParams = [ "sched=bore" ];
-  services.udev.extraRules = ''
-    KERNEL=="uinput", MODE="0660", GROUP="input"
-  '';
-  services.udev.packages = [
-    pkgs.ydotool
-  ];
+
   # Networking
   networking.hostName = "laptop";
   networking.networkmanager.enable = true;
@@ -69,8 +63,6 @@
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
     auto-optimise-store = true;
-    substituters = [ "https://attic.xuyh0120.win/lantian" ];
-    trusted-public-keys = [ "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" ];
     allowed-users = [ "olivernix" "root" ];
   };
 
@@ -96,10 +88,6 @@
      enable = true;
      openFirewall = true;
    };
-  virtualisation.podman = {
-  enable = true;
-  dockerCompat = true;
-  };
   # State version
   system.stateVersion = "25.11";
 }

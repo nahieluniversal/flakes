@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,14 +21,14 @@
     };
   };
 
-  outputs = { self, nixpkgs, millennium, zen-browser, opforjellyfin, nix-cachyos-kernel, jovian, ... }:
+  outputs = { self, nixpkgs, zen-browser, opforjellyfin, nix-cachyos-kernel, jovian, ... }:
     let
       system = "x86_64-linux";
 
       mkHost = hostName: extraModules: nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
-          inherit system millennium zen-browser opforjellyfin nix-cachyos-kernel jovian;
+          inherit system zen-browser opforjellyfin nix-cachyos-kernel jovian;
         };
         modules = [
           ({ config, ... }: {
