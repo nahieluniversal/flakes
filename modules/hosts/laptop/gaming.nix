@@ -1,6 +1,10 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, millennium, ... }:
 
 {
+  nixpkgs.overlays = [
+    millennium.overlays.default
+  ];
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
@@ -9,7 +13,7 @@
     extraCompatPackages = with pkgs; [
       proton-ge-bin
     ];
-    package = pkgs.steam.override {
+    package = pkgs.millennium-steam.override {
       extraEnv = {
         LD_AUDIT = "/home/olivernix/.local/share/SLSsteam/library-inject.so:/home/olivernix/.local/share/SLSsteam/SLSsteam.so";
       };
