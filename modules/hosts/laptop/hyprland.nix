@@ -2,14 +2,8 @@
 
 {
   programs.hyprland.enable = true;
-
-  environment.etc."wayland-sessions/Hyprland.desktop".text = ''
-    [Desktop Entry]
-    Name=Hyprland
-    Comment=Hyprland Wayland compositor
-    Exec=dbus-run-session Hyprland
-    Type=Application
-  '';
+  programs.hyprland.withUWSM = false;
+  services.displayManager.defaultSession = "hyprland";
 
   services.displayManager.sddm = {
     enable = true;
@@ -20,8 +14,8 @@
     ];
     wayland.enable = false;
     settings = {
-      General = {
-        Session = "Hyprland.desktop";
+      Users = {
+        RememberLastSession = false;
       };
     };
   };

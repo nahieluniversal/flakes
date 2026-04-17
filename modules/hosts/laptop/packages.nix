@@ -52,6 +52,7 @@
     kdePackages.okular
     kdePackages.partitionmanager
     keepassxc
+    kitty
     libnotify
     libreoffice-qt-fresh
     localsend
