@@ -28,6 +28,7 @@
     # Common programs from flakes
     ../../programs/zen.nix
     ../../programs/opforjellyfin.nix
+    ../../programs/vicinae.nix
     # Servers
     ./servers.nix
   ];

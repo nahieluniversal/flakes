@@ -20,16 +20,19 @@
       url = "github:Jovian-Experiments/Jovian-NixOS/development";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    vicinae = {
+      url = "github:vicinaehq/vicinae";
+    };
   };
 
-  outputs = { self, nixpkgs, millennium, zen-browser, opforjellyfin, nix-cachyos-kernel, jovian, ... }:
+  outputs = { self, nixpkgs, millennium, zen-browser, opforjellyfin, nix-cachyos-kernel, jovian, vicinae, ... }:
     let
       system = "x86_64-linux";
 
       mkHost = hostName: extraModules: nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
-          inherit system millennium zen-browser opforjellyfin nix-cachyos-kernel jovian;
+          inherit system millennium zen-browser opforjellyfin nix-cachyos-kernel jovian vicinae;
         };
         modules = [
           ({ config, ... }: {
