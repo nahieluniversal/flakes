@@ -15,7 +15,6 @@
     # Packages & Services
     ./packages.nix
     ./../../programs/zen.nix
-    ./../../programs/vicinae.nix
     # Gaming
     ./gaming.nix
   ];
