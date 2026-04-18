@@ -84,7 +84,6 @@
     vencord
     vesktop
     vim
-    vscode
     vscodium
     waybar
     wget
