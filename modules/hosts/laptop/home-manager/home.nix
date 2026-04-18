@@ -172,10 +172,10 @@
 
       "$terminal" = "alacritty";
       "$fileManager" = "dolphin";
-      "$menu" = "wofi --show drun";
 
       exec-once = [
         "swaync"
+        "vicinae server"
         "/home/oliverlin/.config/hypr/xdph.sh"
         "systemctl --user start hyprpolkitagent"
         "hyprnotify"
@@ -314,9 +314,8 @@
         "$mainMod, M, exit,"
         "$mainMod, E, exec, $fileManager"
         "$mainMod, F, togglefloating,"
-        "$mainMod, R, exec, $menu"
         "$mainMod, J, togglesplit,"
-        "$mainMod, space , exec, rofi -show run -theme DarkBlue.rasi"
+        "$mainMod, space , exec, vicinae open"
         "$mainMod, W, exec, zen"
         ", PRINT,exec, hyprshot -m region -o /home/olivernix/Pictures/Screenshots"
         "shift, PRINT, exec, hyprshot -m window -o /home/olivernix/Pictures/Screenshots"
@@ -324,9 +323,7 @@
         "$mainMod_SHIFT, C, forcekillactive"
         "$mainMod_SHIFT, M, exec, shutdown -h now"
         "$mainMod_SHIFT_CONTROL, M, exec, shutdown --reboot now"
-        "$mainMod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
         "$mainMod, L, exec, lutris"
-        "$mainMod, P, exec, cliphist wipe"
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
         "$mainMod, up, movefocus, u"
