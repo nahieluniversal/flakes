@@ -85,6 +85,7 @@
     vesktop
     vim
     vscode
+    vscodium
     waybar
     wget
     wl-clipboard
