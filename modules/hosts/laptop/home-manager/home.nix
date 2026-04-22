@@ -316,6 +316,7 @@
         "$mainMod, F, togglefloating,"
         "$mainMod, J, togglesplit,"
         "$mainMod, space , exec, vicinae open"
+        "$mainMod, V, exec, vicinae vicinae://launch/clipboard/history"
         "$mainMod, W, exec, zen"
         ", PRINT,exec, hyprshot -m region -o /home/olivernix/Pictures/Screenshots"
         "shift, PRINT, exec, hyprshot -m window -o /home/olivernix/Pictures/Screenshots"

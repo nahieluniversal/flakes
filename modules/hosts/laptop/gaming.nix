@@ -32,5 +32,4 @@
     winetricks
     wineWow64Packages.staging
   ];
-  hardware.xpad-noone.enable = true;
 }
