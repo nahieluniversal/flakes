@@ -79,6 +79,10 @@ AppIds:
   - 2694280
 #YOU and ME and HER: A Love Story
   - 1293820
+#The Hundred Line: Last Defense Academy
+  - 3014080
+  - 3319760
+  - 3313470
 #Enables playing of not owned games. Respects black-/whitelist AppIds
 PlayNotOwnedGames: no
 #Additional AppIds to inject (Overrides your black-/whitelist & also overrides OwnerIds for apps you got shared!) Best to use this only on games NOT in your library.
@@ -115,6 +119,9 @@ AdditionalApps:
   - 2694280
   - 1691970
   - 1293820
+  - 3014080
+  - 3319760
+  - 3313470
 #Extra Data for Dlcs belonging to a specific AppId. Only needed
 #when the App you're playing is hit by Steams 64 DLC limit
 DlcData:

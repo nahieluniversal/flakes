@@ -74,6 +74,7 @@
     ryubing
     samrewritten
     scarab
+    stirling-pdf-desktop
     supertuxkart
     testdisk
     tealdeer
