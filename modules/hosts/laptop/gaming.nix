@@ -24,7 +24,6 @@
   environment.systemPackages = with pkgs; [
     gamescope
     heroic
-    lutris
     mangohud
     ppsspp
     prismlauncher
