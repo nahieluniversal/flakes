@@ -50,7 +50,7 @@
         legionGo = mkHost "legos" [
           jovian.nixosModules.default
         ];
-#       server = mkHost "server" [];
+        server = mkHost "server" [];
       };
     };
 }
