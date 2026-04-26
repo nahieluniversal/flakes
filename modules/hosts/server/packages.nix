@@ -27,7 +27,7 @@
     qbittorrent
     rar
     testdisk
-    tldr
+    tealdeer
     unrar
     unzip
     usbutils
