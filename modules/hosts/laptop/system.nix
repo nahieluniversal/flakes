@@ -97,10 +97,6 @@
   };
   programs.nix-ld.enable = true;
   services.tailscale.enable = true;
-  services.jellyfin = {
-     enable = true;
-     openFirewall = true;
-   };
   virtualisation.podman = {
   enable = true;
   dockerCompat = true;

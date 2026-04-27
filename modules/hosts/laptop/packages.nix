@@ -47,6 +47,7 @@
     jdk21
     kdePackages.kate
     kdePackages.dolphin
+    kdePackages.kio-admin
     kdePackages.kservice
     kdePackages.ark
     kdePackages.okular
