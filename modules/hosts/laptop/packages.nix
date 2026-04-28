@@ -79,7 +79,6 @@
     supertuxkart
     testdisk
     tealdeer
-    thunderbird
     tree
     unrar
     unzip
