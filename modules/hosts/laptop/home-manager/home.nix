@@ -380,6 +380,16 @@
         "match:class .*, suppress_event maximize"
         "match:title ^(Gamescope)$, maximize on"
         "match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0, match:pin 0, no_focus on"
+        "suppress_event maximize, match:class .*"
+        "no_focus on, match:xwayland true, match:float true, match:fullscreen false, match:pin false, match:class ^$, match:title ^$"
+        # DRA Test
+        "maximize off, match:class ^(steam_app_3479528751)$, match:initial_title ^$"
+        "no_focus on, match:class ^(steam_app_3479528751)$, match:initial_title ^$"
+        "size 1920 1080, match:class ^(steam_app_3479528751)$, match:initial_title ^$"
+        "move -10000 -10000, match:class ^(steam_app_3479528751)$, match:initial_title ^(Danganronpa ANOTHER)$"
+        "size 1 1, match:class ^(steam_app_3479528751)$, match:initial_title ^(Danganronpa ANOTHER)$"
+        "center on, match:class ^(steam_app_3479528751)$, match:initial_title ^(Danganronpa ANOTHER)$"
+        "maximize on, match:class ^(steam_app_3479528751)$, match:initial_title ^(Danganronpa ANOTHER)$"
       ];
     };
   };
