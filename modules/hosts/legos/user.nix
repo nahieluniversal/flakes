@@ -20,7 +20,7 @@
       plugins = [ "git" "docker" "docker-compose" "kubectl" "kubectx" "z" "zoxide" ];
     };
     shellAliases = {
-      futaba = "sudo nixos-rebuild switch --flake /home/legos/flakes/#legos";
+      futaba = "sudo nixos-rebuild switch --flake /home/legos/flakes/#legos --max-jobs 2";
       hms = "home-manager switch --flake /home/legos/flakes/modules/hosts/legos/home-manager#legos";
       ncg = "sudo nix-collect-garbage -d";
       upd = "cd /home/legos/flakes && nix flake update && futaba";

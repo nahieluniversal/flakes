@@ -10,7 +10,7 @@
       plugins = [ "git" "docker" "docker-compose" "kubectl" "kubectx" "z" "zoxide" ];
     };
     shellAliases = {
-      futaba = "sudo nixos-rebuild switch --flake /home/olivernix/flakes/#server";
+      futaba = "sudo nixos-rebuild switch --flake /home/olivernix/flakes/#server --max-jobs 2";
       cd = "z";
       ncg = "sudo nix-collect-garbage -d";
       upd = "cd /home/olivernix/flakes && nix flake update && futaba";
