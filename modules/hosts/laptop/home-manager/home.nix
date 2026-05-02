@@ -380,10 +380,6 @@
       windowrule = [
         "match:class .*, suppress_event maximize"
         "match:title ^(Gamescope)$, maximize on"
-        # DRA Test
-        # Ventana secundaria: fuera de pantalla y tiny
-        "float on, no_initial_focus on, size 1 1, move -10000 -10000, match:class ^(steam_app_3479528751)$, match:initial_title ^(Danganronpa ANOTHER)$"
-        "monitor eDP-1, fullscreen on, no_initial_focus on, match:class ^(steam_app_3479528751)$, match:initial_title negative:^(Danganronpa ANOTHER)$"
       ];
     };
   };

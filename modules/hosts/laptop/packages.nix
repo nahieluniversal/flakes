@@ -22,6 +22,7 @@
     edl
     eden
     exfatprogs
+    easyrpg-player
     fastfetch
     kdePackages.fcitx5-configtool
     feh
