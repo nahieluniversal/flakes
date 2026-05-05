@@ -4,7 +4,13 @@
   services.httpd = {
     enable = true;
     enablePHP = true;
-    phpPackage = pkgs.php82;  # Añadir esta línea
+    phpPackage = pkgs.php83.withExtensions ({ all }: with all; [
+      mysqli
+      pdo
+      pdo_mysql
+      curl
+      mbstring
+    ]);  # PHP 8.3 con extensiones para MySQL
     
     adminAddr = "admin@localhost";
     
@@ -21,7 +27,13 @@
     };
   };
 
-  services.phpfpm.phpPackage = pkgs.php82;
+  services.phpfpm.phpPackage = pkgs.php83.withExtensions ({ all }: with all; [
+    mysqli
+    pdo
+    pdo_mysql
+    curl
+    mbstring
+  ]);
 
   services.mysql = {
     enable = true;
@@ -29,15 +41,25 @@
     
     settings = {
       mysqld = {
-        bind-address = "127.0.0.1";
-        port = 3306;
+        skip-networking = true;
       };
     };
+
+    ensureUsers = [
+      {
+        name = "root";
+        ensurePermissions = {
+          "*.*" = "ALL PRIVILEGES";
+        };
+      }
+    ];
   };
 
   services.phpMyAdmin = {
     enable = true;
     hostName = "localhost";
+    user = "root";
+    password = "";
     settings = {
       blowfish_secret = "CHANGE_ME_TO_A_32_CHAR_SECRET!!!";
     };
