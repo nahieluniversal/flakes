@@ -15,6 +15,7 @@
     calibre
     cliphist
     compose2nix
+    cpu-x
     curl
     davinci-resolve-studio
     ddrescue

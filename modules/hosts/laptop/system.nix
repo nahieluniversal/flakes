@@ -59,6 +59,7 @@
     LC_TELEPHONE = "es_ES.UTF-8";
     LC_TIME = "es_ES.UTF-8";
   };
+  nix.settings.cores = 4;
   i18n.inputMethod = {  
     enable = true;
     type = "fcitx5";
