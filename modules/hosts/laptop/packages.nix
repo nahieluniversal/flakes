@@ -90,6 +90,7 @@
     vim
     vscodium
     waybar
+    wezterm
     wget
     wl-clipboard
     yt-dlp
