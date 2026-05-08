@@ -65,6 +65,7 @@
     mkvtoolnix
     mpv
     mullvad-vpn
+    nicotine-plus
     olympus
     p7zip
     patchelf
