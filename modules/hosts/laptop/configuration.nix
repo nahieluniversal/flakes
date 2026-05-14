@@ -24,7 +24,7 @@
     
     # Gaming
     ./gaming.nix
-    
+    #./phptest.nix
     # Common programs from flakes
     ../../programs/zen.nix
     ../../programs/opforjellyfin.nix

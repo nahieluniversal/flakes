@@ -64,6 +64,7 @@
     megabasterd
     mkvtoolnix
     mpv
+    mtkclient
     mullvad-vpn
     nicotine-plus
     olympus
