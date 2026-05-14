@@ -15,7 +15,22 @@
   boot.kernelModules = [ "uinput" "usbhid" "joydev" ];
   boot.kernelParams = [ "sched=bore" ];
   services.udev.extraRules = ''
+    # Input devices
     KERNEL=="uinput", MODE="0660", GROUP="input"
+    
+    # USB devices - General access
+    SUBSYSTEM=="usb", GROUP="plugdev", MODE="0660"
+    SUBSYSTEM=="usb_device", GROUP="plugdev", MODE="0660"
+    
+    # USB storage
+    SUBSYSTEM=="usb_device", ENV{DEVTYPE}=="usb_device", GROUP="plugdev", MODE="0660"
+    KERNEL=="sd?", SUBSYSTEM=="block", GROUP="plugdev", MODE="0660"
+    
+    # USB serial devices
+    SUBSYSTEM=="tty", ATTRS{idVendor}=="*", GROUP="plugdev", MODE="0660"
+    
+    # Generic USB monitoring
+    KERNEL=="usbmon*", GROUP="plugdev", MODE="0640"
   '';
   services.udev.packages = [
     pkgs.ydotool

@@ -26,7 +26,7 @@
   users.users.olivernix = {
     isNormalUser = true;
     description = "olivernix";
-    extraGroups = [ "networkmanager" "wheel" "video" "docker" "plugdev" "audio" "openrazer" "ydotool" "input" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "docker" "plugdev" "audio" "openrazer" "ydotool" "input" "dialout" "tty" ];
     packages = with pkgs; [ ];
     shell = pkgs.zsh;
   };
