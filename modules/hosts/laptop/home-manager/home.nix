@@ -69,6 +69,7 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+    TERM = "alacritty";
     XDG_CURRENT_DESKTOP = "Hyprland:KDE";
     XDG_SESSION_DESKTOP = "Hyprland";
     XDG_MENU_PREFIX = "";
@@ -98,8 +99,8 @@
     </Menu>
   '';
   xdg.configFile."hypr/hyprland.conf".source = ./hyprland.conf;
-  xdg.configFile."mpv/mpv.conf".source = ./mpv.conf;
-
+  xdg.configFile."mpv/mpv.conf".source = ./.config/mpv/mpv.conf;
+  xdg.configFile."dolphinrc".source = ./.config/dolphinrc;
   xdg = {
     enable = true;
     mimeApps = {
