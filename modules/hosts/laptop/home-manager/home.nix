@@ -96,9 +96,9 @@
       <DefaultAppDirs/>
       <DefaultDirectoryDirs/>
       <DefaultMergeDirs/>
-    </Menu>
+    </Menu>!
   '';
-  xdg.configFile."hypr/hyprland.conf".source = ./.config/hypr/hyprland.conf;
+  #xdg.configFile."hypr/hyprland.conf".source = ./.config/hypr/hyprland.conf;
   xdg.configFile."mpv/mpv.conf".source = ./.config/mpv/mpv.conf;
   xdg.configFile."dolphinrc".source = ./.config/dolphinrc;
   xdg = {

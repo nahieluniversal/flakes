@@ -77,7 +77,7 @@ hl.config({
 })
 
 -- Dwindle/master/scrolling options
-hl.config({ dwindle = { preserve_split = true, pseudotile = true } })
+hl.config({ dwindle = { preserve_split = true } })
 hl.config({ master = { new_status = "master" } })
 hl.config({ scrolling = { fullscreen_on_one_column = true } })
 
@@ -102,8 +102,8 @@ hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + D", hl.dsp.window.toggle_fullscreen())
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
+hl.bind(mainMod .. " + D", hl.dsp.window.fullscreen({fullscreen, toggle}))
+-- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("vicinae open"))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("vicinae vicinae://launch/clipboard/history"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("zen"))
@@ -111,7 +111,7 @@ hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("zen"))
 -- Screenshot binds (keep as exec cmds)
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region -o /home/olivernix/Pictures/Screenshots"))
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m window -o /home/olivernix/Pictures/Screenshots"))
-hl.bind("SHIFT_CONTROL + PRINT", hl.dsp.exec_cmd("hyprshot -m output -o /home/olivernix/Pictures/Screenshots"))
+hl.bind("SHIFT + CONTROL + PRINT", hl.dsp.exec_cmd("hyprshot -m output -o /home/olivernix/Pictures/Screenshots"))
 
 -- Workspace switching (1..10)
 for i = 1, 10 do
