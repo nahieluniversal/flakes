@@ -5,10 +5,9 @@
   hardware.openrazer.enable = true;
 
   # VirtualBox
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "olivernix" ];
-  virtualisation.virtualbox.host.enableExtensionPack = true;
-
+  #virtualisation.virtualbox.host.enable = true;
+  #users.extraGroups.vboxusers.members = [ "olivernix" ];
+  #virtualisation.virtualbox.host.enableExtensionPack = true;
   # Waydroid
   virtualisation.waydroid = {
     enable = true;
