@@ -80,7 +80,9 @@ hl.config({
 hl.config({ dwindle = { preserve_split = true } })
 hl.config({ master = { new_status = "master" } })
 hl.config({ scrolling = { fullscreen_on_one_column = true } })
-
+-- Cursor theme
+hl.env("XCURSOR_THEME", "miku-cursor-linux")
+hl.env("XCURSOR_SIZE", "24")
 -- Input
 hl.config({ input = {
     kb_layout  = "es",
