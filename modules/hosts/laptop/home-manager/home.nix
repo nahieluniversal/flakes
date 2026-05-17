@@ -90,21 +90,12 @@
   '';
 
   xdg.configFile."mimeapps.list".force = true;
-  xdg.configFile."menus/applications.menu".text = ''
-    <!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
-      "http://www.freedesktop.org/standards/menu-spec/menu-1.0.dtd">
-    <Menu>
-      <Name>Applications</Name>
-      <DefaultAppDirs/>
-      <DefaultDirectoryDirs/>
-      <DefaultMergeDirs/>
-    </Menu>!
-  '';
   xdg.configFile = {
+    "dolphinrc".source = ./.config/dolphinrc;
     "hypr/hyprland.lua".source = ./.config/hypr/hyprland.lua;
     "hypr/hyprlock.conf".source = ./.config/hypr/hyprlock.conf;
+    "menus/applications.menu".source = ./.config/menus/applications.menu;
     "mpv/mpv.conf".source = ./.config/mpv/mpv.conf;
-    "dolphinrc".source = ./.config/dolphinrc;
   };
   xdg = {
     enable = true;
