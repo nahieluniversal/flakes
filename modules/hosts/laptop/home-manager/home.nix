@@ -102,10 +102,10 @@
   '';
   xdg.configFile = {
     "hypr/hyprland.lua".source = ./.config/hypr/hyprland.lua;
-    "hyrp/hyprlock.conf".source = ./.config/hypr/hyprlock.conf;
+    "hypr/hyprlock.conf".source = ./.config/hypr/hyprlock.conf;
     "mpv/mpv.conf".source = ./.config/mpv/mpv.conf;
     "dolphinrc".source = ./.config/dolphinrc;
-  }
+  };
   xdg = {
     enable = true;
     mimeApps = {
