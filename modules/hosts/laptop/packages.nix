@@ -41,6 +41,7 @@
     gst_all_1.gst-plugins-ugly
     gtk3
     home-manager
+    hyprlock
     hyprnotify
     hyprpaper
     hyprpolkitagent

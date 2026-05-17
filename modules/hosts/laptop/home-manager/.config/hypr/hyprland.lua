@@ -112,7 +112,6 @@ hl.bind(mainMod .. " + D", hl.dsp.window.fullscreen({fullscreen, toggle}))
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("vicinae open"))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("vicinae vicinae://launch/clipboard/history"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("zen"))
-
 -- Screenshot binds (keep as exec cmds)
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region -o /home/olivernix/Pictures/Screenshots"))
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m window -o /home/olivernix/Pictures/Screenshots"))

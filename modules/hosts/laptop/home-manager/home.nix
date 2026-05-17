@@ -100,9 +100,12 @@
       <DefaultMergeDirs/>
     </Menu>!
   '';
-  xdg.configFile."hypr/hyprland.lua".source = ./.config/hypr/hyprland.lua;
-  xdg.configFile."mpv/mpv.conf".source = ./.config/mpv/mpv.conf;
-  xdg.configFile."dolphinrc".source = ./.config/dolphinrc;
+  xdg.configFile = {
+    "hypr/hyprland.lua".source = ./.config/hypr/hyprland.lua;
+    "hyrp/hyprlock.conf".source = ./.config/hypr/hyprlock.conf;
+    "mpv/mpv.conf".source = ./.config/mpv/mpv.conf;
+    "dolphinrc".source = ./.config/dolphinrc;
+  }
   xdg = {
     enable = true;
     mimeApps = {
