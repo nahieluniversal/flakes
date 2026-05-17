@@ -49,6 +49,8 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+
+    ".config/fcitx5/profile".source = ./.config/fcitx5/profile;
   };
 
   # Home Manager can also manage your environment variables through
