@@ -72,6 +72,7 @@
     patchelf
     pavucontrol
     pdfchain
+    python3
     protonup-qt
     qbittorrent
     rar
