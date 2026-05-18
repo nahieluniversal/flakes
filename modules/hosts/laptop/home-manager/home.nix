@@ -49,8 +49,6 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
-
-    ".config/fcitx5/profile".source = ./.config/fcitx5/profile;
   };
 
   # Home Manager can also manage your environment variables through
@@ -92,6 +90,7 @@
   xdg.configFile."mimeapps.list".force = true;
   xdg.configFile = {
     "dolphinrc".source = ./.config/dolphinrc;
+    "fcitx5/profile".source = ./.config/fcitx5/profile;
     "hypr/hyprland.lua".source = ./.config/hypr/hyprland.lua;
     "hypr/hyprlock.conf".source = ./.config/hypr/hyprlock.conf;
     "menus/applications.menu".source = ./.config/menus/applications.menu;
@@ -103,27 +102,22 @@
       enable = true;
       defaultApplications = {
         "inode/directory" = [ "org.kde.dolphin.desktop" ];
-
         "text/plain" = [ "org.kde.kate.desktop" ];
-
         "application/pdf" = [ "org.kde.okular.desktop" ];
-
         "image/png" = [ "feh.desktop" ];
         "image/jpeg" = [ "feh.desktop" ];
         "image/webp" = [ "feh.desktop" ];
-
         "audio/mpeg" = [ "mpv.desktop" ];
         "audio/flac" = [ "mpv.desktop" ];
         "audio/ogg" = [ "mpv.desktop" ];
         "video/mp4" = [ "mpv.desktop" ];
         "video/x-matroska" = [ "mpv.desktop" ];
         "video/x-msvideo" = [ "mpv.desktop" ];
-
         "application/zip" = [ "org.kde.ark.desktop" ];
         "application/x-7z-compressed" = [ "org.kde.ark.desktop" ];
         "application/x-rar" = [ "org.kde.ark.desktop" ];
         "application/x-tar" = [ "org.kde.ark.desktop" ];
-
+        "application/vnd.microsoft.portable-executable" = [ "wine.desktop" ];
         "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = [ "libreoffice-writer.desktop" ];
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" = [ "libreoffice-calc.desktop" ];
         "application/vnd.openxmlformats-officedocument.presentationml.presentation" = [ "libreoffice-impress.desktop" ];
@@ -132,25 +126,20 @@
       associations = {
         added = {
           "text/plain" = [ "org.kde.kate.desktop" "code.desktop" ];
-
           "application/pdf" = [ "org.kde.okular.desktop" ];
-
           "image/png" = [ "feh.desktop" "gimp.desktop" ];
           "image/jpeg" = [ "feh.desktop" "gimp.desktop" ];
           "image/webp" = [ "feh.desktop" "gimp.desktop" ];
-
           "audio/mpeg" = [ "mpv.desktop" ];
           "audio/flac" = [ "mpv.desktop" ];
           "audio/ogg" = [ "mpv.desktop" ];
           "video/mp4" = [ "mpv.desktop" ];
           "video/x-matroska" = [ "mpv.desktop" ];
           "video/x-msvideo" = [ "mpv.desktop" ];
-
           "application/zip" = [ "org.kde.ark.desktop" ];
           "application/x-7z-compressed" = [ "org.kde.ark.desktop" ];
           "application/x-rar" = [ "org.kde.ark.desktop" ];
           "application/x-tar" = [ "org.kde.ark.desktop" ];
-
           "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = [ "libreoffice-writer.desktop" ];
           "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" = [ "libreoffice-calc.desktop" ];
           "application/vnd.openxmlformats-officedocument.presentationml.presentation" = [ "libreoffice-impress.desktop" ];
