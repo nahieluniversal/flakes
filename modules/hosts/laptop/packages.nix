@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme
     android-tools
+    ani-cli
     alacritty
     aria2
     aseprite
