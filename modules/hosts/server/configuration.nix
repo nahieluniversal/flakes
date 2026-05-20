@@ -24,7 +24,6 @@
     
     # Gaming
     #./gaming.nix
-    ./docker-compose.nix
     # Common programs from flakes
     #../../programs/zen.nix
     ../../programs/opforjellyfin.nix
