@@ -74,11 +74,6 @@
     fileSystems = [ "/home" ];
     interval = "weekly";
   };
-  #Tailscale
-  services.tailscale = {
-    enable = true;
-    useRoutingFeatures = "server";
-  };
   services.jellyfin = {
     enable = true;
     openFirewall = true;
