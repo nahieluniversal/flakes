@@ -1,0 +1,20 @@
+name: Sync from Codeberg
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mirror from Codeberg to GitHub
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          set -euo pipefail
+          git clone --mirror "https://codeberg.org/nahieluniversal/flakes.git" repo.git
+          cd repo.git
+          git remote set-url --push origin "https://x-access-token:${GH_TOKEN}@github.com/nahieluniversal/flakes.git"
+          git push --mirror
