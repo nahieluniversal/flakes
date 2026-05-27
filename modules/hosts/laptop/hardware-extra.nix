@@ -2,7 +2,7 @@
 
 {
   # Hardware support
-  hardware.openrazer.enable = true;
+  #hardware.openrazer.enable = true;
 
   # VirtualBox
   #virtualisation.virtualbox.host.enable = true;
