@@ -50,6 +50,7 @@
     itch
     jdk21
     kdePackages.kate
+    kdePackages.kdenlive
     kdePackages.dolphin
     kdePackages.kio-admin
     kdePackages.kservice
