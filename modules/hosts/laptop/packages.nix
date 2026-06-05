@@ -74,6 +74,7 @@
     patchelf
     pavucontrol
     pdfchain
+    podman-compose
     python3
     protonup-qt
     qbittorrent
@@ -97,6 +98,7 @@
     waybar
     wezterm
     wget
+    winboat
     wl-clipboard
     yt-dlp
     zenity

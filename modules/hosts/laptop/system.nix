@@ -116,9 +116,15 @@
   };
   programs.nix-ld.enable = true;
   services.tailscale.enable = true;
-  virtualisation.podman = {
-  enable = true;
-  dockerCompat = true;
+  virtualisation = {
+    podman = {
+      enable = true;
+    };
+    docker = {
+      enable = true;
+      extraOptions = "--group-add plugdev";
+      storageDriver = "btrfs";
+    };
   };
 #Appimage support
 programs.appimage.enable = true;
