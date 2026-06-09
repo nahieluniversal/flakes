@@ -29,6 +29,7 @@
     feh
     ffmpeg
     filezilla
+    flycast
     fzf
     gimp
     git
