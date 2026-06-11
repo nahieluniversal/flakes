@@ -41,6 +41,7 @@
     gst_all_1.gst-plugins-good
     gst_all_1.gst-plugins-ugly
     gtk3
+    hexchat
     home-manager
     hyprlock
     hyprnotify
