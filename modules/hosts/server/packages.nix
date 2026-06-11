@@ -35,7 +35,6 @@
     wget
     zenity
     zip
-    zoxide
   ];
 
   #fonts.packages = with pkgs; [
