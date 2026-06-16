@@ -26,6 +26,7 @@
   };
 
   outputs = { self, nixpkgs, millennium, zen-browser, opforjellyfin, nix-cachyos-kernel, jovian, vicinae, ... }:
+# Variables for the flake to make easier to read and maintain new hosts and modules
     let
       system = "x86_64-linux";
 
