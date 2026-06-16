@@ -8,6 +8,7 @@
     alacritty
     aria2
     aseprite
+    audacity
     ayugram-desktop
     awww
     baobab
