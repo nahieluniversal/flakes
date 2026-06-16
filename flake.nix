@@ -27,31 +27,31 @@
 
   outputs = { self, nixpkgs, millennium, zen-browser, opforjellyfin, nix-cachyos-kernel, jovian, vicinae, ... }:
 # Variables for the flake to make easier to read and maintain new hosts and modules
-    let
-      system = "x86_64-linux";
-
-      mkHost = hostName: extraModules: nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit system millennium zen-browser opforjellyfin nix-cachyos-kernel jovian vicinae;
-        };
-        modules = [
-          ({ config, ... }: {
-            nixpkgs.overlays = [
-              nix-cachyos-kernel.overlays.default
-            ];
-          })
-        ] ++ extraModules ++ [
-          ./modules/hosts/${hostName}/configuration.nix
-        ];
-      };
-    in {
-      nixosConfigurations = {
-        laptop = mkHost "laptop" [];
-        legionGo = mkHost "legos" [
-          jovian.nixosModules.default
-        ];
-        server = mkHost "server" [];
-      };
+  let
+    system = "x86_64-linux";
+     mkHost = hostName: extraModules: nixpkgs.lib.nixosSystem {
+       inherit system;
+      specialArgs = {
+        inherit system millennium zen-browser opforjellyfin nix-cachyos-kernel jovian vicinae;
+       };
+       modules = [
+         ({ config, ... }: {
+           nixpkgs.overlays = [
+             nix-cachyos-kernel.overlays.default
+          ];
+         })
+      ] ++ extraModules ++ [
+         ./modules/hosts/${hostName}/configuration.nix
+       ];
     };
+  in 
+   {
+    nixosConfigurations = {
+       laptop = mkHost "laptop" [];
+       legionGo = mkHost "legos" [
+         jovian.nixosModules.default
+      ];
+      server = mkHost "server" [];
+     };
+  };
 }
