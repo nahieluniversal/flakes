@@ -60,6 +60,7 @@
     kdePackages.okular
     kdePackages.partitionmanager
     keepassxc
+    kvirc
     lame
     libnotify
     libreoffice-qt-fresh
