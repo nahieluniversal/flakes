@@ -13,6 +13,7 @@
     awww
     baobab
     brightnessctl
+    bottles
     cabextract
     calibre
     cliphist
@@ -30,6 +31,7 @@
     feh
     ffmpeg
     filezilla
+    flac
     flycast
     fzf
     gimp
