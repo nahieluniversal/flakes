@@ -38,6 +38,11 @@
          ({ config, ... }: {
            nixpkgs.overlays = [
              nix-cachyos-kernel.overlays.default
+             (final: prev: {
+               vesktop = prev.vesktop.override {
+                 pnpm_10_29_2 = final.pnpm_10;
+               };
+             })
           ];
          })
       ] ++ extraModules ++ [

@@ -111,7 +111,6 @@
     zenity
     zip
   ];
-
   fonts.packages = with pkgs; [
     font-awesome
   ];
