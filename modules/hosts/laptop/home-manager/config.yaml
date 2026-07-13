@@ -97,6 +97,12 @@ AppIds:
   - 4704690
 #60 Parsecs
   - 646270
+#SMT V
+  - 1875830
+#Project Diva
+  - 1761390
+#Soul Hackers II
+  - 1777620
 #Enables playing of not owned games. Respects black-/whitelist AppIds
 PlayNotOwnedGames: no
 #Additional AppIds to inject (Overrides your black-/whitelist & also overrides OwnerIds for apps you got shared!) Best to use this only on games NOT in your library.
@@ -144,6 +150,9 @@ AdditionalApps:
   - 268910
   - 4704690
   - 646270
+  - 1875830
+  - 1761390
+  - 1777620
 #Extra Data for Dlcs belonging to a specific AppId. Only needed
 #when the App you're playing is hit by Steams 64 DLC limit
 DlcData:

@@ -6,7 +6,8 @@ stdenv.mkDerivation {
   
   src = ./cpuid_fault_emulation; 
   
-  nativeBuildInputs = kernel.moduleBuildDependencies ++ [ llvmPackages.clang-unwrapped ];
+  # Añadimos clang-unwrapped Y lld al entorno de construcción
+  nativeBuildInputs = kernel.moduleBuildDependencies ++ [ llvmPackages.clang-unwrapped llvmPackages.lld ];
   
   hardeningDisable = [ "pic" ];
 
@@ -15,13 +16,11 @@ stdenv.mkDerivation {
     obj-m += cpuid_fault_emulation.o
     cpuid_fault_emulation-objs := src/cpuid_fault_emulation.o src/capture_context.o src/run_vm.o
     
-    # Flags para archivos C
-    ccflags-y += -I\$(src)/inc
-    ccflags-y += -Wno-unused-command-line-argument
+    ccflags-y += -Iinc
+    asflags-y += -Iinc
     
-    # Flags para el preprocesador de ensamblador (.S)
-    cppflags-y += -I\$(src)/inc
-    cppflags-y += -Wno-unused-command-line-argument
+    ccflags-y += -Wno-unused-command-line-argument
+    asflags-y += -Wno-unused-command-line-argument
     
     KDIR := ${kernel.dev}/lib/modules/${kernel.modDirVersion}/build
     

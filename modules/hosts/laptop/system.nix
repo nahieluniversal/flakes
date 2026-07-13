@@ -13,7 +13,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto-x86_64-v3;
   boot.kernelModules = [ "uinput" "usbhid" "joydev" ];
-  boot.kernelParams = [ "sched=bore" ];
+  boot.kernelParams = [ "sched=bore" "clearcpuid=umip" ];
   services.udev.extraRules = ''
     # Input devices
     KERNEL=="uinput", MODE="0660", GROUP="input"
