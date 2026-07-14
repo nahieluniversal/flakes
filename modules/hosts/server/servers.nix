@@ -1,10 +1,6 @@
 { pkgs, lib, config, ... }:
 
 {
-  services.shoko = {
-    enable = true;
-    openFirewall = true;
-  };
   #Tailscale
   services.tailscale = {
     enable = true;

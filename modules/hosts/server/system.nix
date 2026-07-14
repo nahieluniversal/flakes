@@ -74,10 +74,6 @@
     fileSystems = [ "/home" ];
     interval = "weekly";
   };
-  services.jellyfin = {
-    enable = true;
-    openFirewall = true;
-  };
   virtualisation = {
     containers.enable = true;
     podman = {
