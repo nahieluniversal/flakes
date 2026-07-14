@@ -52,7 +52,7 @@
   {
     nixosConfigurations = {
       laptop = mkHost "laptop" [
-        ./modules/hv/module.nix  # Añade el módulo aquí
+        ./modules/hv/module.nix
       ];
       legionGo = mkHost "legionGo" [];
       server = mkHost "server" [];

@@ -11,8 +11,8 @@
   # Networking
   networking.hostName = "server";
   networking.networkmanager.enable = true;
-  networking.firewall.allowedTCPPorts = [ 22 80 443 1401 2200 9091 12345 47984 47989 47990 48010 51413 53317 53318 53333 ];
-  networking.firewall.allowedUDPPorts = [ 53 1194 1195 1196 1197 1300 1301 1302 1303 1400 9091 12345 47984 47989 47990 48010 51413 53317 53318 53333];
+  networking.firewall.allowedTCPPorts = [ 22 80 443 1401 2200 7359 8096 9091 12345 47984 47989 47990 48010 51413 53317 53318 53333 ];
+  networking.firewall.allowedUDPPorts = [ 53 1194 1195 1196 1197 1300 1301 1302 1303 1400 7359 80969091 12345 47984 47989 47990 48010 51413 53317 53318 53333];
   networking.nameservers = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
 
   services.resolved = {
@@ -78,8 +78,16 @@
     enable = true;
     openFirewall = true;
   };
-  virtualisation.docker = {
-  enable = true;
+  virtualisation = {
+    containers.enable = true;
+    podman = {
+      enable = true;
+      dockerCompat = false;
+      defaultNetwork.settings.dns_enabled = true; # Required for containers under podman-compose to be able to talk to each other.
+    };
+    docker = {
+      enable = true;
+    };
   };
   # State version
   system.stateVersion = "26.05";
