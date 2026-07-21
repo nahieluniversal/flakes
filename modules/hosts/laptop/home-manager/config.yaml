@@ -103,6 +103,10 @@ AppIds:
   - 1761390
 #Soul Hackers II
   - 1777620
+#Denshattack
+  - 4609680
+#The Quintessential Quintuplets: Memories of a Quintessential Summer
+  - 2507610
 #Enables playing of not owned games. Respects black-/whitelist AppIds
 PlayNotOwnedGames: no
 #Additional AppIds to inject (Overrides your black-/whitelist & also overrides OwnerIds for apps you got shared!) Best to use this only on games NOT in your library.
@@ -153,6 +157,8 @@ AdditionalApps:
   - 1875830
   - 1761390
   - 1777620
+  - 4609680
+  - 2507610
 #Extra Data for Dlcs belonging to a specific AppId. Only needed
 #when the App you're playing is hit by Steams 64 DLC limit
 DlcData:

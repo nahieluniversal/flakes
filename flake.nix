@@ -54,7 +54,6 @@
       laptop = mkHost "laptop" [
         ./modules/hv/module.nix
       ];
-      legionGo = mkHost "legionGo" [];
       server = mkHost "server" [];
     };
   };
