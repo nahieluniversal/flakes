@@ -7,6 +7,7 @@
     device = "nodev";
     efiSupport = true;
     useOSProber = true;
+    memtest86.enable = true;
   };
   boot.loader.efi.canTouchEfiVariables = true;
 
