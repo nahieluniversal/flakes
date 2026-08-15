@@ -41,9 +41,4 @@
   #];
 
   #services.flatpak.enable = true;
-
-  services.mullvad-vpn = {
-    enable = true;
-    package = pkgs.mullvad-vpn;
-  };
 }
