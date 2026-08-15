@@ -7,7 +7,7 @@
     ani-cli
     alacritty
     aria2
-    aseprite
+    #aseprite
     audacity
     ayugram-desktop
     awww
@@ -44,7 +44,6 @@
     gst_all_1.gst-plugins-good
     gst_all_1.gst-plugins-ugly
     gtk3
-    hexchat
     home-manager
     hyprlock
     hyprnotify
@@ -119,6 +118,6 @@
   programs.ydotool.enable = true;
   services.mullvad-vpn = {
     enable = true;
-    package = pkgs.mullvad-vpn;
+    gui.enable = true;
   };
 }
