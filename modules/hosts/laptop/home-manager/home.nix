@@ -87,6 +87,7 @@
     "hypr/hyprlock.conf".source = ./.config/hypr/hyprlock.conf;
     "menus/applications.menu".source = ./.config/menus/applications.menu;
     "mpv/mpv.conf".source = ./.config/mpv/mpv.conf;
+    "SLSsteam/config.yaml".source = ./.config/SLSsteam/config.yaml;
   };
   xdg = {
     enable = true;

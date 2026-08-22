@@ -36,7 +36,7 @@
       modules = [
         ({ config, ... }: {
           nixpkgs.overlays = [
-            nix-cachyos-kernel.overlays.default
+            nix-cachyos-kernel.overlays.pinned
           ];
           nixpkgs.config = {
             permittedInsecurePackages = [ "electron-40.10.5" ];

@@ -22,6 +22,7 @@
     # USB devices - General access
     SUBSYSTEM=="usb", GROUP="plugdev", MODE="0660"
     SUBSYSTEM=="usb_device", GROUP="plugdev", MODE="0660"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="057e", ATTRS{idProduct}=="3000", MODE="0666"
     
     # USB storage
     SUBSYSTEM=="usb_device", ENV{DEVTYPE}=="usb_device", GROUP="plugdev", MODE="0660"

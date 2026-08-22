@@ -7,7 +7,7 @@
     ani-cli
     alacritty
     aria2
-    #aseprite
+    aseprite
     audacity
     ayugram-desktop
     awww
@@ -75,6 +75,7 @@
     mtkclient
     mullvad-vpn
     nicotine-plus
+    ns-usbloader
     olympus
     p7zip
     patchelf
