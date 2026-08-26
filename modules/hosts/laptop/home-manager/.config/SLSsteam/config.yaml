@@ -111,6 +111,8 @@ AppIds:
   - 2288350
 #Fall Again
   - 4565980
+#Persona 4 Arena Ultimax
+  - 1602010
 #Enables playing of not owned games. Respects black-/whitelist AppIds
 PlayNotOwnedGames: no
 #Additional AppIds to inject (Overrides your black-/whitelist & also overrides OwnerIds for apps you got shared!) Best to use this only on games NOT in your library.
@@ -165,6 +167,7 @@ AdditionalApps:
   - 2507610
   - 2288350
   - 4565980
+  - 1602010
 #Extra Data for Dlcs belonging to a specific AppId. Only needed
 #when the App you're playing is hit by Steams 64 DLC limit
 DlcData:
