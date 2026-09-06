@@ -65,7 +65,7 @@
     kvirc
     lame
     libnotify
-    libreoffice-qt-fresh
+    libreoffice-qt-stable
     localsend
     lshw
     lshw-gui
