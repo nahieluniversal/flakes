@@ -128,8 +128,6 @@
     };
     docker = {
       enable = true;
-      extraOptions = "--group-add plugdev";
-      storageDriver = "btrfs";
     };
   };
 #Appimage support
