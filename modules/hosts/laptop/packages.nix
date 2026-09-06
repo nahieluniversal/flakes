@@ -24,6 +24,7 @@
     distrobox
     edl
     eden
+    electrum
     exfatprogs
     easyrpg-player
     fastfetch
@@ -75,6 +76,7 @@
     mtkclient
     mullvad-vpn
     nicotine-plus
+    nodejs_26
     ns-usbloader
     olympus
     p7zip
@@ -90,6 +92,7 @@
     ryubing
     samrewritten
     scarab
+    smartmontools
     stirling-pdf-desktop
     supertuxkart
     testdisk
