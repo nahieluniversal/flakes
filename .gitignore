@@ -1,1 +1,2 @@
 laptop/modules/hv/cpuid_fault_emulation/*
+server/modules/hosts/server/containers/sonarr/config/*
