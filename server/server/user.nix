@@ -10,9 +10,9 @@
       plugins = [ "git" "docker" "docker-compose" "kubectl" "kubectx" ];
     };
     shellAliases = {
-      futaba = "sudo nixos-rebuild switch --flake /home/olivernix/flakes/#server --max-jobs 2";
+      futaba = "sudo nixos-rebuild switch --flake /home/olivernix/flakes/server/#server --max-jobs 2";
       ncg = "sudo nix-collect-garbage -d";
-      upd = "cd /home/olivernix/flakes && nix flake update && futaba";
+      upd = "cd /home/olivernix/flakes/server && nix flake update && futaba";
     };
     #Check if the shell is interactive before running fastfetch to avoid issues in non-interactive shells
     shellInit = ''

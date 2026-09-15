@@ -25,8 +25,8 @@
     # Gaming
     #./gaming.nix
     # Common programs from flakes
-    #../../programs/zen.nix
-    ../../programs/opforjellyfin.nix
+    #../modules/programs/zen.nix
+    ../modules/programs/opforjellyfin.nix
     #Servers
     ./servers.nix
   ];
