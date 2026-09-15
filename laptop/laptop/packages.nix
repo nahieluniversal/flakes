@@ -1,0 +1,129 @@
+{ config, pkgs, lib, ... }:
+
+{
+  environment.systemPackages = with pkgs; [
+    adwaita-icon-theme
+    android-tools
+    ani-cli
+    alacritty
+    aria2
+    aseprite
+    audacity
+    ayugram-desktop
+    awww
+    baobab
+    brightnessctl
+    bottles
+    cabextract
+    calibre
+    cliphist
+    compose2nix
+    cpu-x
+    curl
+    ddrescue
+    distrobox
+    edl
+    eden
+    electrum
+    exfatprogs
+    easyrpg-player
+    fastfetch
+    kdePackages.fcitx5-configtool
+    feh
+    ffmpeg
+    filezilla
+    flac
+    flycast
+    fzf
+    gimp
+    git
+    go
+    godot
+    gst_all_1.gst-libav
+    gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
+    gst_all_1.gst-plugins-ugly
+    gtk3
+    home-manager
+    hyprlock
+    hyprnotify
+    hyprpaper
+    hyprpolkitagent
+    hyprshot
+    itch
+    jdk21
+    kdePackages.kate
+    kdePackages.kdenlive
+    kdePackages.dolphin
+    kdePackages.kio-admin
+    kdePackages.kservice
+    kdePackages.ark
+    kdePackages.okular
+    kdePackages.partitionmanager
+    keepassxc
+    kvirc
+    lame
+    libnotify
+    libreoffice-qt-stable
+    localsend
+    lshw
+    lshw-gui
+    material-icons
+    megabasterd
+    mkvtoolnix
+    mpv
+    mtkclient
+    mullvad-vpn
+    nicotine-plus
+    nodejs_26
+    ns-usbloader
+    olympus
+    p7zip
+    patchelf
+    pavucontrol
+    pdfchain
+    podman-compose
+    proton-vpn
+    python3
+    protonup-qt
+    qbittorrent
+    rar
+    rofi
+    ryubing
+    samrewritten
+    scarab
+    smartmontools
+    stirling-pdf-desktop
+    supertuxkart
+    testdisk
+    tealdeer
+    tree
+    unrar
+    unzip
+    usbutils
+    vencord
+    vesktop
+    vim
+    vscodium
+    waybar
+    wezterm
+    wireguard-tools
+    wget
+    winboat
+    wl-clipboard
+    yt-dlp
+    zenity
+    zip
+  ];
+  fonts.packages = with pkgs; [
+    font-awesome
+  ];
+
+  services.flatpak.enable = true;
+  programs.ydotool.enable = true;
+  services.mullvad-vpn = {
+    enable = true;
+    gui.enable = true;
+  };
+}

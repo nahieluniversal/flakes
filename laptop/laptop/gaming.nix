@@ -1,0 +1,34 @@
+{ config, pkgs, lib, millennium, ... }:
+
+{
+  nixpkgs.overlays = [
+    millennium.overlays.default
+  ];
+  programs.gamemode.enable = true;
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
+    extraCompatPackages = with pkgs; [
+      proton-ge-bin
+    ];
+    package = pkgs.millennium-steam.override {
+      extraEnv = {
+        LD_AUDIT = "/home/olivernix/.local/share/SLSsteam/library-inject.so:/home/olivernix/.local/share/SLSsteam/SLSsteam.so";
+      };
+    };
+  };
+
+  # Gaming-related packages
+  environment.systemPackages = with pkgs; [
+    gamescope
+    heroic
+    mangohud
+    ppsspp
+    prismlauncher
+    protontricks
+    winetricks
+    wineWow64Packages.staging
+  ];
+}
