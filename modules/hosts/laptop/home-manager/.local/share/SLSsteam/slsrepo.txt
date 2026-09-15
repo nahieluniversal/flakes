@@ -1,2 +1,0 @@
-SLSSteam Repo For AGPL-3.0 license compliance
-https://github.com/AceSLS/SLSsteam/
