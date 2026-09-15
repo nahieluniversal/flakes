@@ -84,6 +84,7 @@
     pavucontrol
     pdfchain
     podman-compose
+    protonvpn-gui
     python3
     protonup-qt
     qbittorrent
@@ -107,6 +108,7 @@
     vscodium
     waybar
     wezterm
+    wireguard-tools
     wget
     winboat
     wl-clipboard
