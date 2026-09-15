@@ -26,9 +26,9 @@
     ./gaming.nix
     #./phptest.nix
     # Common programs from flakes
-    ../../programs/zen.nix
-    ../../programs/opforjellyfin.nix
-    ../../programs/vicinae.nix
+    ../modules/programs/zen.nix
+    ../modules/programs/opforjellyfin.nix
+    ../modules/programs/vicinae.nix
     # Servers
     ./servers.nix
   ];
