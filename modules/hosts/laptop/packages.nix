@@ -84,7 +84,7 @@
     pavucontrol
     pdfchain
     podman-compose
-    protonvpn-gui
+    proton-vpn
     python3
     protonup-qt
     qbittorrent
