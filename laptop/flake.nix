@@ -28,31 +28,27 @@
   outputs = { self, nixpkgs, millennium, zen-browser, opforjellyfin, nix-cachyos-kernel, jovian, vicinae, ... }:
   let
     system = "x86_64-linux";
-    mkHost = hostName: extraModules: nixpkgs.lib.nixosSystem {
-      inherit system;
-      specialArgs = {
-        inherit system millennium zen-browser opforjellyfin nix-cachyos-kernel jovian vicinae;
-      };
-      modules = [
-        ({ config, ... }: {
-          nixpkgs.overlays = [
-            nix-cachyos-kernel.overlays.pinned
-          ];
-          nixpkgs.config = {
-            permittedInsecurePackages = [ "electron-40.10.5" ];
-          };
-        })
-      ] ++ extraModules ++ [
-        ./modules/hosts/${hostName}/configuration.nix
-      ];
-    };
-  in 
+  in
   {
     nixosConfigurations = {
-      laptop = mkHost "laptop" [
-        ./modules/hv/module.nix
-      ];
-      server = mkHost "server" [];
+      laptop = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit system millennium zen-browser opforjellyfin nix-cachyos-kernel jovian vicinae;
+        };
+        modules = [
+          ({ config, ... }: {
+            nixpkgs.overlays = [
+              nix-cachyos-kernel.overlays.pinned
+            ];
+            nixpkgs.config = {
+              permittedInsecurePackages = [ "electron-40.10.5" ];
+            };
+          })
+          ./modules/hv/module.nix
+          ./laptop/configuration.nix
+        ];
+      };
     };
   };
 }
