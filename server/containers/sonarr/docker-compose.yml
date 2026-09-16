@@ -8,7 +8,7 @@ services:
       - PGID=1000
       - TZ=Europe/Madrid
     volumes:
-      - ./config :/config
+      - ./config:/config
       - /home/olivernix/hdd:/hdd
       - /home/olivernix/qbittorrent/downloads:/downloads
     ports:
