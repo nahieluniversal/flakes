@@ -139,6 +139,8 @@ programs.appimage.package = pkgs.appimage-run.override
   [
     pkgs.icu
     pkgs.zstd
+    pkgs.libepoxy
+    pkgs.openssl_4_0
   ]; 
 };
 programs.nix-ld = {

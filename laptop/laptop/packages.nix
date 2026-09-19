@@ -126,4 +126,5 @@
     enable = true;
     gui.enable = true;
   };
+  programs.ente-auth.enable = true;
 }
