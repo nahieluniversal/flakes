@@ -1,4 +1,4 @@
-{ system, vicinae, ... }:
+{ pkgs, system, vicinae, ... }:
 
 {
   environment.systemPackages = [

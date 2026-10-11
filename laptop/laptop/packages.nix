@@ -105,6 +105,7 @@
     usbutils
     vencord
     vesktop
+    vicinae
     vim
     vscodium
     waybar

@@ -12,16 +12,12 @@
       url = "github:nahieluniversal/opforjellyfin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-cachyos-kernel = {
-      url = "github:xddxdd/nix-cachyos-kernel/release";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     vicinae = {
       url = "github:vicinaehq/vicinae";
     };
   };
 
-  outputs = { self, nixpkgs, millennium, zen-browser, opforjellyfin, nix-cachyos-kernel, vicinae, ... }:
+  outputs = { self, nixpkgs, millennium, zen-browser, opforjellyfin, vicinae, ... }:
   let
     system = "x86_64-linux";
   in
@@ -30,14 +26,9 @@
       laptop = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
-          inherit system millennium zen-browser opforjellyfin nix-cachyos-kernel vicinae;
+          inherit system millennium zen-browser opforjellyfin vicinae;
         };
         modules = [
-          ({ config, ... }: {
-            nixpkgs.overlays = [
-              nix-cachyos-kernel.overlays.default
-            ];
-          })
           ./modules/hv/module.nix
           ./laptop/configuration.nix
         ];

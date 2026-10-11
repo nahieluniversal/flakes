@@ -1,48 +1,24 @@
-{ lib, stdenv, kernel, llvmPackages, ... }:
-
+{ stdenv, kernel }:
+     
 stdenv.mkDerivation {
-  pname = "cpuid-fault-emulation";
-  version = "1.0";
-  
-  src = ./cpuid_fault_emulation; 
-  
-  # Añadimos clang-unwrapped Y lld al entorno de construcción
-  nativeBuildInputs = kernel.moduleBuildDependencies ++ [ llvmPackages.clang-unwrapped llvmPackages.lld ];
-  
-  hardeningDisable = [ "pic" ];
-
-  patchPhase = ''
-    cat > Makefile <<EOF
-    obj-m += cpuid_fault_emulation.o
-    cpuid_fault_emulation-objs := src/cpuid_fault_emulation.o src/capture_context.o src/run_vm.o
-    
-    ccflags-y += -Iinc
-    asflags-y += -Iinc
-    
-    ccflags-y += -Wno-unused-command-line-argument
-    asflags-y += -Wno-unused-command-line-argument
-    
-    KDIR := ${kernel.dev}/lib/modules/${kernel.modDirVersion}/build
-    
-    all:
-    	make LLVM=1 -C \$(KDIR) M=\$(PWD) modules
-    
-    install:
-    	make LLVM=1 -C \$(KDIR) M=\$(PWD) INSTALL_MOD_PATH=\$(out) modules_install
-    EOF
+  pname = "cpuid_fault_emulation";
+  version = "0.1";
+  src = ./cpuid_fault_emulation;  
+  nativeBuildInputs = kernel.moduleBuildDependencies;
+  hardeningDisable = [
+    "pic"
+    "format"
+  ];  
+  # Patch the hardcoded host paths to point into the Nix store
+  postPatch = ''
+    substituteInPlace Makefile \
+    --replace '/lib/modules/$(KERNEL)/build' '${kernel.dev}/lib/modules/${kernel.modDirVersion}/build' \
+    --replace '$(shell uname -r)' '${kernel.modDirVersion}'
   '';
-
-  buildPhase = ''
-    make all
-  '';
-
   installPhase = ''
-    make install
-  '';
-  
-  meta = with lib; {
-    description = "CPUID Fault Emulation kernel module";
-    license = licenses.gpl2Only;
-    platforms = platforms.linux;
-  };
+    install -D cpuid_fault_emulation.ko \
+    $out/lib/modules/${kernel.modDirVersion}/extra/cpuid_fault_emulation.ko
+  '';   
+  meta.platforms = [ "x86_64-linux" ];
+  meta.description = "CPUID fault emulation module for the Linux kernel";
 }

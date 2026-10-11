@@ -1,4 +1,4 @@
-{ config, pkgs, lib, nix-cachyos-kernel, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Bootloader.
@@ -12,7 +12,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Use latest kernel.
-  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto-x86_64-v3;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "uinput" "usbhid" "joydev" ];
   boot.kernelParams = [ "sched=bore" "clearcpuid=umip" ];
   services.udev.extraRules = ''
@@ -100,8 +100,8 @@
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
     auto-optimise-store = true;
-    substituters = [ "https://attic.xuyh0120.win/lantian" "https://vicinae.cachix.org" ];
-    trusted-public-keys = [ "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="];
+    substituters = [ "https://vicinae.cachix.org" ];
+    trusted-public-keys = [ "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc=" ];
     allowed-users = [ "olivernix" "root" ];
   };
 
