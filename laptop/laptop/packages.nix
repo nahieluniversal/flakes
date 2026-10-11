@@ -54,6 +54,7 @@
     itch
     jdk21
     kdePackages.kate
+    kdePackages.kcalc
     kdePackages.kdenlive
     kdePackages.dolphin
     kdePackages.kio-admin

@@ -16,16 +16,12 @@
       url = "github:xddxdd/nix-cachyos-kernel/release";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    jovian = {
-      url = "github:Jovian-Experiments/Jovian-NixOS/development";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     vicinae = {
       url = "github:vicinaehq/vicinae";
     };
   };
 
-  outputs = { self, nixpkgs, millennium, zen-browser, opforjellyfin, nix-cachyos-kernel, jovian, vicinae, ... }:
+  outputs = { self, nixpkgs, millennium, zen-browser, opforjellyfin, nix-cachyos-kernel, vicinae, ... }:
   let
     system = "x86_64-linux";
   in
@@ -34,16 +30,13 @@
       laptop = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
-          inherit system millennium zen-browser opforjellyfin nix-cachyos-kernel jovian vicinae;
+          inherit system millennium zen-browser opforjellyfin nix-cachyos-kernel vicinae;
         };
         modules = [
           ({ config, ... }: {
             nixpkgs.overlays = [
-              nix-cachyos-kernel.overlays.pinned
+              nix-cachyos-kernel.overlays.default
             ];
-            nixpkgs.config = {
-              permittedInsecurePackages = [ "electron-40.10.5" ];
-            };
           })
           ./modules/hv/module.nix
           ./laptop/configuration.nix
