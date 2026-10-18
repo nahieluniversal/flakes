@@ -29,6 +29,7 @@
     ../modules/programs/zen.nix
     ../modules/programs/opforjellyfin.nix
     #../modules/programs/vicinae.nix
+    ../modules/programs/twintaillauncher.nix
     # Servers
     ./servers.nix
   ];

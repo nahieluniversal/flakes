@@ -15,9 +15,13 @@
     vicinae = {
       url = "github:vicinaehq/vicinae";
     };
+    twintaillauncher = {
+      url = "github:axioncs/twintaillauncher-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, millennium, zen-browser, opforjellyfin, vicinae, ... }:
+  outputs = { self, nixpkgs, millennium, zen-browser, opforjellyfin, vicinae, twintaillauncher, ... }:
   let
     system = "x86_64-linux";
   in
@@ -26,11 +30,19 @@
       laptop = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
-          inherit system millennium zen-browser opforjellyfin vicinae;
+          inherit system millennium zen-browser opforjellyfin vicinae twintaillauncher;
         };
         modules = [
-          ./modules/hv/module.nix
           ./laptop/configuration.nix
+          {
+            specialisation."hypervisor".configuration = {
+              imports = [
+                ./modules/hv/module.nix
+              ];
+            };
+            specialisation."no-hv".configuration = {
+            };
+          }
         ];
       };
     };
