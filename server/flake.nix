@@ -31,7 +31,7 @@
   in
   {
     nixosConfigurations = {
-      laptop = nixpkgs.lib.nixosSystem {
+      server = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
           inherit system millennium zen-browser opforjellyfin nix-cachyos-kernel jovian vicinae;
