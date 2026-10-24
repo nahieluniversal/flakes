@@ -42,7 +42,7 @@
   networking.networkmanager.enable = true;
   networking.firewall.allowedTCPPorts = [ 22 80 443 1401 2200 2234 8111 47984 47989 47990 48010 53317 53318 ];
   networking.firewall.allowedUDPPorts = [ 53 1194 1195 1196 1197 1300 1301 1302 1303 1400 2234 47984 47989 47990 48010 53317 53318 ];
-  networking.nameservers = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
+  networking.nameservers = [ "85.208.114.51#dns.xdp.es" "2a0e:97c0:c40::51#dns.xdp.es" ];
   #networking.extraHosts = ''
   #  0.0.0.0 paradise-s1.battleye.com
   #  0.0.0.0 test-s1.battleye.com
@@ -52,10 +52,9 @@
   services.resolved = {
     enable = true;
     settings.Resolve = {
-      dnssec = "true";
-      domains = [ "~." ];
-      fallbackDns = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
-      dnsovertls = "true";
+      DNS = [ "85.208.114.51#dns.xdp.es" "2a0e:97c0:c40::51#dns.xdp.es" ];
+      DNSOverTLS = "yes";
+      DNSSEC = "allow-downgrade";
     };
   };
    # Laptop Lid Config (Comment to enable suspend on lid close)
