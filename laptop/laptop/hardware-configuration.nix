@@ -25,7 +25,7 @@
     };
 
   fileSystems."/home" =
-    { device = "/dev/nvme0n1p4";
+    { device = "/dev/nvme0n1p3";
       fsType = "btrfs";
     };
 
