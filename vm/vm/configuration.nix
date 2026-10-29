@@ -1,0 +1,36 @@
+# Edit this configuration file to define what should be installed on
+# your system.  Help is available in the configuration.nix(5) man page
+# and in the NixOS manual (accessible by running ‘nixos-help’).
+
+{ config, pkgs, lib, ... }:
+
+{
+  imports = [
+    # Hardware
+    ./hardware-configuration.nix
+    ./hardware-extra.nix
+    
+    # Display & Environment
+    ./hyprland.nix
+    
+    # User & Shell
+    ./user.nix
+    
+    # System configuration
+    ./system.nix
+    
+    # Packages & Services
+    ./packages.nix
+    
+    # Gaming
+    ./gaming.nix
+    #./phptest.nix
+    # Common programs from flakes
+    ../modules/programs/zen.nix
+    ../modules/programs/opforjellyfin.nix
+    #../modules/programs/vicinae.nix
+    ../modules/programs/twintaillauncher.nix
+    # Servers
+    ./servers.nix
+  ];
+}
