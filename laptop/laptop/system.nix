@@ -40,8 +40,8 @@
   # Networking
   networking.hostName = "laptop";
   networking.networkmanager.enable = true;
-  networking.firewall.allowedTCPPorts = [ 22 80 443 1401 2200 2234 8111 47984 47989 47990 48010 53317 53318 ];
-  networking.firewall.allowedUDPPorts = [ 53 1194 1195 1196 1197 1300 1301 1302 1303 1400 2234 47984 47989 47990 48010 53317 53318 ];
+  networking.firewall.allowedTCPPorts = [ 22 80 443 1401 2200 2234 8111 39380 47984 47989 47990 48010 53317 53318 ];
+  networking.firewall.allowedUDPPorts = [ 53 1194 1195 1196 1197 1300 1301 1302 1303 1400 2234 39380 47984 47989 47990 48010 53317 53318 ];
   networking.nameservers = [ "85.208.114.51#dns.xdp.es" "2a0e:97c0:c40::51#dns.xdp.es" ];
   #networking.extraHosts = ''
   #  0.0.0.0 paradise-s1.battleye.com
@@ -139,7 +139,7 @@ programs.appimage.package = pkgs.appimage-run.override
     pkgs.icu
     pkgs.zstd
     pkgs.libepoxy
-    pkgs.openssl_4_0
+#   pkgs.openssl_4_0
   ]; 
 };
 programs.nix-ld = {
