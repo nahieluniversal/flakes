@@ -18,6 +18,14 @@ stdenv.mkDerivation {
   installPhase = ''
     install -D cpuid_fault_emulation.ko \
     $out/lib/modules/${kernel.modDirVersion}/extra/cpuid_fault_emulation.ko
+
+    if [ -f cpuid_fault_emulation.ko.cer ]; then
+      install -D cpuid_fault_emulation.ko.cer \
+      $out/lib/modules/${kernel.modDirVersion}/extra/cpuid_fault_emulation.ko.cer
+    else
+      mkdir -p $out/lib/modules/${kernel.modDirVersion}/extra
+      : > $out/lib/modules/${kernel.modDirVersion}/extra/cpuid_fault_emulation.ko.cer
+    fi
   '';   
   meta.platforms = [ "x86_64-linux" ];
   meta.description = "CPUID fault emulation module for the Linux kernel";
